@@ -270,3 +270,36 @@ export const CONTACT = {
         { name: "Facebook", href: "https://facebook.com/nirrjhorr", icon: SiFacebook, color: "#1877F2" },
     ]
 };
+
+export const QA_JOKES = [
+    "It works on my machine… but let’s see what QA has to say about it!",
+    "Found a bug! Time to call the bug exterminator… oh wait, that’s me.",
+    "QA: Breaking your code gracefully, one test at a time.",
+    "If it compiles, it must be perfect… said no tester ever.",
+    "Warning: Entering a bug-infested zone. Proceed with caution!",
+    "I don’t always test software, but when I do, I break it spectacularly.",
+    "Debugging is like being a detective in a crime movie where you are also the murderer.",
+    "Another day, another bug… don’t worry, QA’s got this.",
+    "Code works in theory… reality is overrated.",
+    "QA: Making developers cry since the dawn of version control.",
+    "Found a defect? Congratulations, you just unlocked the ‘QA Achievement’.",
+    "Bugs are like gremlins… feed them and they multiply exponentially.",
+    "Keep calm and let QA handle your nightmares disguised as code.",
+    "Every bug you find today will become a heroic story tomorrow.",
+    "QA doesn’t break things… we just reveal their true chaotic potential.",
+    "If it ain’t tested, it ain’t trusted. QA’s motto forever.",
+    "Debugging: The art of removing bugs that shouldn’t have existed in the first place.",
+    "Code like a dev, break like a tester.",
+    "QA: Saving users from the horrors that developers accidentally release.",
+    "I write test cases for fun… and your panic for free.",
+    "Bugs are like unicorns… rare, magical, and impossible to ignore.",
+    "Your code just met QA… consider yourself inspected.",
+    "Test, fail, repeat… the QA circle of life.",
+    "Bug detected! QA is on it faster than a caffeine-powered squirrel.",
+    "Errors, warnings, exceptions… QA sees them all, and laughs a little.",
+    "QA doesn’t judge code… we just judge the people who wrote it.",
+    "The build is stable… until QA touches it.",
+    "Welcome to QA land, where every click might uncover chaos.",
+    "If QA had a superpower, it would be finding bugs in less than a nanosecond.",
+    "Congratulations! Your code survived the QA gauntlet… barely."
+];
