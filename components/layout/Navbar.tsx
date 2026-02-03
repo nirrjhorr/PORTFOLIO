@@ -15,14 +15,17 @@ export const Navbar = () => {
                 <a href="#home" className="text-sm font-semibold text-white hover:text-blue-400 transition-colors">
                     Home
                 </a>
-                <a href="#stack" className="text-sm font-semibold text-white hover:text-blue-400 transition-colors">
-                    Stack
-                </a>
                 <a href="#work" className="text-sm font-semibold text-white hover:text-blue-400 transition-colors">
                     Work
                 </a>
+                <a href="#projects" className="text-sm font-semibold text-white hover:text-blue-400 transition-colors">
+                    Projects
+                </a>
                 <a href="#contact" className="text-sm font-semibold text-white hover:text-blue-400 transition-colors">
                     Contact
+                </a>
+                <a href="#education" className="text-sm font-semibold text-white hover:text-blue-400 transition-colors">
+                    Education & Certifications
                 </a>
             </nav>
         </motion.header>
