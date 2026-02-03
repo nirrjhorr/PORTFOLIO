@@ -8,18 +8,43 @@ import { ArrowDown } from "@gravity-ui/icons";
 import { cn } from "@/lib/utils";
 
 export const Hero = () => {
-    const [joke, setJoke] = React.useState<string | null>(null);
+    const [toast, setToast] = React.useState<{ message: string; position: 'left' | 'right' | 'bottom' } | null>(null);
     const timeoutRef = React.useRef<NodeJS.Timeout | null>(null);
 
     const handlePhotoHover = () => {
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
 
         const randomJoke = QA_JOKES[Math.floor(Math.random() * QA_JOKES.length)];
-        setJoke(randomJoke);
+        const positions: ('left' | 'right' | 'bottom')[] = ['left', 'right', 'bottom'];
+        const randomPosition = positions[Math.floor(Math.random() * positions.length)];
+
+        setToast({ message: randomJoke, position: randomPosition });
 
         timeoutRef.current = setTimeout(() => {
-            setJoke(null);
+            setToast(null);
         }, 3000);
+    };
+
+    const getToastVariants = (position: 'left' | 'right' | 'bottom') => {
+        switch (position) {
+            case 'left':
+                return { initial: { x: -100, opacity: 0 }, animate: { x: 40, opacity: 1 }, exit: { x: -100, opacity: 0 } };
+            case 'right':
+                return { initial: { x: 100, opacity: 0 }, animate: { x: -40, opacity: 1 }, exit: { x: 100, opacity: 0 } };
+            case 'bottom':
+                return { initial: { y: 100, opacity: 0 }, animate: { y: -40, opacity: 1 }, exit: { y: 100, opacity: 0 } };
+        }
+    };
+
+    const getToastStyle = (position: 'left' | 'right' | 'bottom'): React.CSSProperties => {
+        switch (position) {
+            case 'left':
+                return { left: 0, top: '50%', transform: 'translateY(-50%)' };
+            case 'right':
+                return { right: 0, top: '50%', transform: 'translateY(-50%)' };
+            case 'bottom':
+                return { bottom: 0, left: '50%', transform: 'translateX(-50%)' };
+        }
     };
 
     return (
@@ -33,15 +58,16 @@ export const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="max-w-4xl space-y-8 relative z-10"
+                className="max-w-4xl space-y-12 relative z-10 flex flex-col items-center"
             >
-                <div className="relative inline-block mx-auto mb-10">
+                {/* Profile Header: Photo & Batch Side by Side */}
+                <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-4">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.5 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5 }}
                         onMouseEnter={handlePhotoHover}
-                        className="relative w-40 h-40 md:w-52 md:h-52 cursor-pointer group"
+                        className="relative w-40 h-40 md:w-52 md:h-52 cursor-pointer group shrink-0"
                     >
                         <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
                         <div className="relative w-full h-full rounded-full border-2 border-white/10 overflow-hidden backdrop-blur-sm bg-white/5 shadow-2xl transition-transform duration-500 group-hover:scale-105 group-hover:border-blue-500/30">
@@ -53,36 +79,41 @@ export const Hero = () => {
                         </div>
                     </motion.div>
 
-                    <AnimatePresence>
-                        {joke && (
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.8, y: 10, x: 20 }}
-                                animate={{ opacity: 1, scale: 1, y: 0, x: 40 }}
-                                exit={{ opacity: 0, scale: 0.8, y: 10 }}
-                                className="absolute top-0 -right-4 md:-right-20 z-50 pointer-events-none"
-                            >
-                                <div className="glass-card px-6 py-4 rounded-[1.5rem] max-w-[250px] text-sm font-medium text-white shadow-2xl border-blue-500/20 relative">
-                                    {joke}
-                                    {/* Tooltip Arrow alternative */}
-                                    <div className="absolute top-1/2 -left-2 -translate-y-1/2 w-4 h-4 bg-zinc-900 border-l border-b border-white/5 rotate-45" />
-                                </div>
-                            </motion.div>
-                        )}
-                    </AnimatePresence>
+                    <div className="flex flex-col items-start gap-4">
+                        <div className="inline-block px-5 py-2 rounded-full border border-white/10 bg-white/5 text-base font-medium text-blue-400 backdrop-blur-md">
+                            {PROFILE.role}
+                        </div>
+                        <p className="text-zinc-500 font-mono text-sm hidden md:block">Hover for QA Insights →</p>
+                    </div>
                 </div>
 
-                <div className="inline-block px-5 py-2 rounded-full border border-white/10 bg-white/5 text-base font-medium text-blue-400 mb-8 backdrop-blur-md">
-                    {PROFILE.role}
+                <div className="space-y-6">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 pb-2 break-words">
+                        {PROFILE.name}
+                    </h1>
+
+                    <p className="text-lg md:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed px-4">
+                        {PROFILE.summary}
+                    </p>
                 </div>
 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 pb-6 break-words">
-                    {PROFILE.name}
-                </h1>
-
-                <p className="text-lg md:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed px-4">
-                    {PROFILE.summary}
-                </p>
-
+                <AnimatePresence>
+                    {toast && (
+                        <motion.div
+                            key={toast.message}
+                            initial={getToastVariants(toast.position).initial}
+                            animate={getToastVariants(toast.position).animate}
+                            exit={getToastVariants(toast.position).exit}
+                            className="fixed z-[9999] pointer-events-none p-6"
+                            style={getToastStyle(toast.position)}
+                        >
+                            <div className="glass-card px-8 py-6 rounded-[2rem] max-w-[320px] text-base font-medium text-white shadow-[0_0_50px_rgba(0,0,0,0.5)] border-blue-500/30 relative">
+                                <div className="absolute -top-1 -left-1 w-3 h-3 bg-blue-500 rounded-full animate-ping" />
+                                {toast.message}
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
                 <div className="flex items-center justify-center gap-4 mt-8">
                     <a href={PROFILE.resumeUrl} download>
                         <Button view="action" size="xl" className="rounded-full px-8 py-6 text-lg shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] transition-all">
