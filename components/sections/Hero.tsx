@@ -25,9 +25,9 @@ export const Hero = () => {
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
-                    className="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-8"
+                    className="relative w-40 h-40 md:w-52 md:h-52 mx-auto mb-10"
                 >
-                    <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-2xl animate-pulse" />
+                    <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
                     <div className="relative w-full h-full rounded-full border-2 border-white/10 overflow-hidden backdrop-blur-sm bg-white/5 shadow-2xl">
                         <img
                             src={PROFILE.profileImage}
@@ -37,15 +37,15 @@ export const Hero = () => {
                     </div>
                 </motion.div>
 
-                <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-sm font-medium text-blue-400 mb-6 backdrop-blur-md">
+                <div className="inline-block px-5 py-2 rounded-full border border-white/10 bg-white/5 text-base font-medium text-blue-400 mb-8 backdrop-blur-md">
                     {PROFILE.role}
                 </div>
 
-                <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 pb-4 break-words">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 pb-6 break-words">
                     {PROFILE.name}
                 </h1>
 
-                <p className="text-xl md:text-2xl text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+                <p className="text-lg md:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed px-4">
                     {PROFILE.summary}
                 </p>
 
