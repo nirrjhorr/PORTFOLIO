@@ -13,7 +13,7 @@ export const EducationCertifications = () => {
                 <h2 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 mb-6 uppercase tracking-tighter">
                     Credentials
                 </h2>
-                <div className="h-1.5 w-24 bg-blue-600 mx-auto rounded-full mb-6 shadow-[0_0_15px_rgba(37,99,235,0.8)]" />
+                <div className="h-1.5 w-24 bg-amber-600 mx-auto rounded-full mb-6 shadow-[0_0_15px_rgba(245,158,11,0.8)]" />
                 <p className="text-zinc-400 text-lg">Academic Foundation & Professional Milestones</p>
             </div>
 
@@ -21,8 +21,8 @@ export const EducationCertifications = () => {
                 {/* Education Column */}
                 <div className="space-y-10">
                     <div className="flex items-center gap-4 mb-8">
-                        <div className="p-3 rounded-2xl bg-blue-500/10 border border-blue-500/20">
-                            <GraduationCap className="w-8 h-8 text-blue-400" />
+                        <div className="p-3 rounded-2xl bg-amber-500/10 border border-amber-500/20">
+                            <GraduationCap className="w-8 h-8 text-amber-400" />
                         </div>
                         <h3 className="text-3xl font-bold text-white tracking-tight">Education</h3>
                     </div>
@@ -35,18 +35,21 @@ export const EducationCertifications = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className="group relative overflow-hidden bg-zinc-900/40 backdrop-blur-md border border-white/5 p-8 rounded-[2rem] hover:border-blue-500/30 transition-all duration-500 hover:shadow-[0_0_50px_rgba(37,99,235,0.05)]"
+                                className="group relative overflow-hidden bg-zinc-900/40 backdrop-blur-md border border-white/5 p-8 rounded-[2rem] hover:border-amber-500/30 transition-all duration-500 hover:shadow-[0_0_50px_rgba(245,158,11,0.05)]"
                             >
+                                {/* Yellow Hue on hover */}
+                                <div className="absolute inset-0 bg-amber-500/0 group-hover:bg-amber-500/[0.02] transition-colors duration-500" />
+
                                 <div className="absolute top-0 right-0 p-8 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
                                     <GraduationCap className="w-24 h-24 text-white" />
                                 </div>
 
                                 <div className="relative z-10">
                                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                                        <h4 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                                        <h4 className="text-2xl font-bold text-white group-hover:text-amber-400 transition-colors">
                                             {edu.degree}
                                         </h4>
-                                        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-mono whitespace-nowrap">
+                                        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-sm font-mono whitespace-nowrap">
                                             <Calendar className="w-3.5 h-3.5" />
                                             {edu.year}
                                         </span>
@@ -91,6 +94,11 @@ export const EducationCertifications = () => {
                                     <div className="absolute inset-0 bg-amber-500/0 group-hover:bg-amber-500/[0.02] transition-colors duration-500" />
 
                                     <div className="absolute -top-10 -right-10 w-32 h-32 bg-amber-500/20 blur-[80px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+
+                                    {/* Bug Icon in the corner like the image */}
+                                    <div className="absolute top-4 right-4 text-white/5 group-hover:text-amber-500/20 transition-colors">
+                                        <Bug className="w-12 h-12" />
+                                    </div>
 
                                     <div className="relative z-10 flex flex-col h-full justify-between gap-6">
                                         <div>
