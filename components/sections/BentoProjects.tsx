@@ -30,9 +30,9 @@ export const BentoProjects = () => {
                                 {project.description}
                             </p>
 
-                            <div className="flex flex-nowrap gap-2 overflow-x-auto no-scrollbar scroll-smooth">
+                            <div className="flex flex-nowrap gap-1.5 overflow-x-auto no-scrollbar scroll-smooth mt-auto pt-4 border-t border-white/5">
                                 {project.tags.map((tag: string, i: number) => (
-                                    <Label key={i} theme="info" className="bg-blue-500/10 text-blue-300 border-blue-500/20 px-3 py-1 text-[10px] whitespace-nowrap">
+                                    <Label key={i} theme="info" className="bg-blue-500/10 text-blue-300 border-blue-500/20 px-2 py-0.5 text-[9px] uppercase tracking-wider whitespace-nowrap">
                                         {tag}
                                     </Label>
                                 ))}
