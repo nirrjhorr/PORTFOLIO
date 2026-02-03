@@ -45,8 +45,12 @@ export const ExperienceTimeline = () => {
                         <div className="ml-12 md:ml-0 md:w-[48%] w-full bg-zinc-900/40 backdrop-blur border border-white/5 p-8 rounded-2xl hover:border-white/10 transition-colors group">
                             <div className="flex items-center gap-5 mb-6">
                                 {/* Logo / Monogram Fallback */}
-                                <div className={cn("w-14 h-14 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg", getColor(exp.company))}>
-                                    {getInitials(exp.company)}
+                                <div className={cn("w-14 h-14 rounded-full flex items-center justify-center text-white shadow-lg shrink-0", getColor(exp.company))}>
+                                    {exp.icon ? (
+                                        <exp.icon size={28} />
+                                    ) : (
+                                        <span className="font-bold text-xl">{getInitials(exp.company)}</span>
+                                    )}
                                 </div>
                                 <div>
                                     <h3 className="text-2xl font-bold text-white leading-tight">{exp.role}</h3>
