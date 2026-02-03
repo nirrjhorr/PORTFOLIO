@@ -265,7 +265,7 @@ export const CERTIFICATIONS = [
         name: "SQA & Cybersecurity",
         issuer: "IT Training BD",
         year: "2024",
-        color: "bg-zinc-700",
+        color: "bg-amber-500",
     },
     {
         name: "Mastering Cybersecurity: Essential Knowledge and Techniques",

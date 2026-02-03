@@ -74,33 +74,41 @@ export const EducationCertifications = () => {
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
-                        {CERTIFICATIONS.map((cert, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.1 }}
-                                viewport={{ once: true }}
-                                className="group relative overflow-hidden bg-zinc-900/40 backdrop-blur-md border border-white/5 p-8 rounded-[2rem] hover:border-amber-500/30 transition-all duration-500"
-                            >
-                                <div className="absolute -top-10 -right-10 w-32 h-32 bg-amber-500/20 blur-[80px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                        {CERTIFICATIONS.map((cert, index) => {
+                            // Map bg color to text color for hover
+                            const hoverTextColor = cert.color.replace("bg-", "group-hover:text-").replace("-500", "-400").replace("-600", "-400").replace("-700", "-400");
 
-                                <div className="relative z-10 flex flex-col h-full justify-between gap-6">
-                                    <div>
-                                        <h4 className="text-xl font-bold text-white mb-2 leading-tight group-hover:text-amber-400 transition-colors">
-                                            {cert.name}
-                                        </h4>
-                                        <div className="text-zinc-400 font-medium flex items-center gap-2">
-                                            <div className={cn("w-2 h-2 rounded-full", cert.color.replace('bg-', 'bg-').split(' ')[0])} />
-                                            {cert.issuer}
+                            return (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: index * 0.1 }}
+                                    viewport={{ once: true }}
+                                    className="group relative overflow-hidden bg-zinc-900/40 backdrop-blur-md border border-white/5 p-8 rounded-[2rem] hover:border-amber-500/30 transition-all duration-500 hover:shadow-[0_0_50px_rgba(245,158,11,0.05)]"
+                                >
+                                    {/* Yellow Hue on hover */}
+                                    <div className="absolute inset-0 bg-amber-500/0 group-hover:bg-amber-500/[0.02] transition-colors duration-500" />
+
+                                    <div className="absolute -top-10 -right-10 w-32 h-32 bg-amber-500/20 blur-[80px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+
+                                    <div className="relative z-10 flex flex-col h-full justify-between gap-6">
+                                        <div>
+                                            <h4 className={cn("text-xl font-bold text-white mb-2 leading-tight transition-colors", hoverTextColor)}>
+                                                {cert.name}
+                                            </h4>
+                                            <div className="text-zinc-400 font-medium flex items-center gap-2">
+                                                <div className={cn("w-2 h-2 rounded-full", cert.color)} />
+                                                {cert.issuer}
+                                            </div>
+                                        </div>
+                                        <div className="flex justify-start text-[11px] tracking-widest font-mono text-zinc-500 uppercase border-t border-white/5 pt-4">
+                                            Issue Date: {cert.year}
                                         </div>
                                     </div>
-                                    <div className="flex justify-start text-[11px] tracking-widest font-mono text-zinc-500 uppercase border-t border-white/5 pt-4">
-                                        Issue Date: {cert.year}
-                                    </div>
-                                </div>
-                            </motion.div>
-                        ))}
+                                </motion.div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
