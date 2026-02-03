@@ -142,9 +142,27 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
     {
+        title: "OrangeHRM | HR Management System",
+        description: "Performed manual and API testing on an open-source HRM platform, validating employee management, attendance, leave workflows, and role-based access control to ensure business rule compliance.",
+        tags: ["Manual Testing", "API Testing"],
+        link: "#",
+    },
+    {
         title: "Bug Report Automation | QA Tool",
         description: "Built a Python-based desktop tool to analyze and visualize bug reports from Excel/CSV files, enabling quick QA insights through an interactive GUI.",
         tags: ["Python", "Tkinter", "Pandas", "Excel"],
+        link: "#",
+    },
+    {
+        title: "BanglaPuzzle | Performance Testing",
+        description: "Performed load and performance testing on core web application workflows to evaluate system stability, response time, and behavior under stress.",
+        tags: ["JMeter", "Performance Testing"],
+        link: "#",
+    },
+    {
+        title: "Daraz | Manual Test Cases",
+        description: "Designed and maintained structured manual test cases for key e-commerce workflows to ensure functional accuracy and business requirement coverage.",
+        tags: ["Manual Testing", "Test Case Design"],
         link: "#",
     },
     {
@@ -203,7 +221,7 @@ export const PROJECTS = [
     },
     {
         title: "Fabrilife | E-commerce",
-        description: "Performed deep manual testing on a major e-commerce platform, identifying over 1000 issues across UI, functional, usability, performance, and security areas.",
+        description: "Performed deep manual testing on a major e-commerce platform, identifying 28 bugs across UI, functional, usability, performance, and security areas.",
         tags: ["Manual Testing", "Bug Hunting", "Excel", "UI/UX"],
         link: "#",
     },
