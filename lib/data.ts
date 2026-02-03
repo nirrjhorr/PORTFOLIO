@@ -138,13 +138,13 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
     {
-        title: "SodiumLearn || LMS & LXP Platform",
+        title: "SodiumLearn | LMS & LXP Platform",
         description: "Performed manual, regression, and end-to-end testing on a SaaS-based, multi-tenant LMS/LXP platform. Validated frontend-backend integrations in a CI/CD-driven environment using GitLab.",
         tags: ["Manual Testing", "API Testing", "GitLab", "SaaS"],
         link: "#",
     },
     {
-        title: "AgroMart II | E-commerce Platform",
+        title: "AgroMart | E-commerce Platform",
         description: "Developed a MERN stack e-commerce platform and performed extensive load and performance testing on key workflows to evaluate system behavior under stress.",
         tags: ["MongoDB", "Express", "React", "Node", "JMeter"],
         link: "#",
@@ -156,43 +156,43 @@ export const PROJECTS = [
         link: "#",
     },
     {
-        title: "RESTful Booker || API Testing",
+        title: "RESTful Booker | API Testing",
         description: "Designed and executed automated API tests for booking management, handling environment variables and complex CRUD workflows with high precision.",
         tags: ["Postman", "Newman", "API Testing"],
         link: "#",
     },
     {
-        title: "VIstock II || POS & Inventory",
+        title: "VIstock | POS & Inventory",
         description: "Designed and executed comprehensive test cases for dashboard, inventory, transactions, and HR modules of a complex POS system. Validated core API endpoints.",
         tags: ["Manual Testing", "API", "Jira", "Excel"],
         link: "#",
     },
     {
-        title: "HRMaster || HR Management",
+        title: "HRMaster | HR Management",
         description: "Verified employee tracking, attendance, payroll, and leave management modules through rigorous manual and API testing to ensure business logic compliance.",
         tags: ["Manual Testing", "API", "Jira", "Software QA"],
         link: "#",
     },
     {
-        title: "Midnight Feast Pizza || Freelance",
+        title: "Midnight Feast Pizza | Freelance",
         description: "Designed and tested a WordPress website for a local business. Performed functional testing on menu browsing, online ordering, and contact forms.",
         tags: ["WordPress", "Manual Testing", "Web Design"],
         link: "#",
     },
     {
-        title: "Konnect II || Edtech Platform",
+        title: "Konnect | Edtech Platform",
         description: "Conducted manual testing of a social networking platform, covering authentication, profile management, messaging, notifications, and search functions.",
         tags: ["Jira", "XMind", "Manual Testing", "Usability"],
         link: "#",
     },
     {
-        title: "Dmoney II || Fintech Platform",
+        title: "Dmoney | Fintech Platform",
         description: "Tested a digital payment platform focusing on service charges, cashback policies, and loan workflows. Validated functional and business rule compliance.",
         tags: ["Manual Testing", "Fintech", "XMind", "Excel"],
         link: "#",
     },
     {
-        title: "Fabrilife II || E-commerce",
+        title: "Fabrilife | E-commerce",
         description: "Performed deep manual testing on a major e-commerce platform, identifying over 1000 issues across UI, functional, usability, performance, and security areas.",
         tags: ["Manual Testing", "Bug Hunting", "Excel", "UI/UX"],
         link: "#",

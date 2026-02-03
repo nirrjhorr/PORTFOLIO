@@ -90,10 +90,10 @@ export const EducationCertifications = () => {
                                         <h4 className="text-xl font-bold text-white mb-2 leading-tight group-hover:text-purple-400 transition-colors">
                                             {cert.name}
                                         </h4>
-                                        <p className="text-zinc-400 font-medium flex items-center gap-2">
+                                        <div className="text-zinc-400 font-medium flex items-center gap-2">
                                             <div className={cn("w-2 h-2 rounded-full", cert.color.replace('bg-', 'bg-').split(' ')[0])} />
                                             {cert.issuer}
-                                        </p>
+                                        </div>
                                     </div>
                                     <div className="flex justify-start text-[11px] tracking-widest font-mono text-zinc-500 uppercase border-t border-white/5 pt-4">
                                         Issue Date: {cert.year}
