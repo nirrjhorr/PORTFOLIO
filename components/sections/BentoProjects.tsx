@@ -12,7 +12,6 @@ export const BentoProjects = () => {
                 <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 mb-4">
                     Recent Work
                 </h2>
-                <p className="text-zinc-400">Automated Frameworks & Quality Engineering</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
