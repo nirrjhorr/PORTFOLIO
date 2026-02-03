@@ -8,14 +8,14 @@ import { ArrowDown } from "@gravity-ui/icons";
 import { cn } from "@/lib/utils";
 
 export const Hero = () => {
-    const [toast, setToast] = React.useState<{ message: string; position: 'left' | 'right' | 'bottom' } | null>(null);
+    const [toast, setToast] = React.useState<{ message: string; position: 'left' | 'right' } | null>(null);
     const timeoutRef = React.useRef<NodeJS.Timeout | null>(null);
 
     const handlePhotoHover = () => {
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
 
         const randomJoke = QA_JOKES[Math.floor(Math.random() * QA_JOKES.length)];
-        const positions: ('left' | 'right' | 'bottom')[] = ['left', 'right', 'bottom'];
+        const positions: ('left' | 'right')[] = ['left', 'right'];
         const randomPosition = positions[Math.floor(Math.random() * positions.length)];
 
         setToast({ message: randomJoke, position: randomPosition });
@@ -25,25 +25,21 @@ export const Hero = () => {
         }, 3000);
     };
 
-    const getToastVariants = (position: 'left' | 'right' | 'bottom') => {
+    const getToastVariants = (position: 'left' | 'right') => {
         switch (position) {
             case 'left':
                 return { initial: { x: -100, opacity: 0 }, animate: { x: 40, opacity: 1 }, exit: { x: -100, opacity: 0 } };
             case 'right':
                 return { initial: { x: 100, opacity: 0 }, animate: { x: -40, opacity: 1 }, exit: { x: 100, opacity: 0 } };
-            case 'bottom':
-                return { initial: { y: 100, opacity: 0 }, animate: { y: -40, opacity: 1 }, exit: { y: 100, opacity: 0 } };
         }
     };
 
-    const getToastStyle = (position: 'left' | 'right' | 'bottom'): React.CSSProperties => {
+    const getToastStyle = (position: 'left' | 'right'): React.CSSProperties => {
         switch (position) {
             case 'left':
                 return { left: 0, top: '50%', transform: 'translateY(-50%)' };
             case 'right':
                 return { right: 0, top: '50%', transform: 'translateY(-50%)' };
-            case 'bottom':
-                return { bottom: 0, left: '50%', transform: 'translateX(-50%)' };
         }
     };
 
@@ -58,33 +54,28 @@ export const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="max-w-4xl space-y-12 relative z-10 flex flex-col items-center"
+                className="max-w-4xl space-y-8 relative z-10 flex flex-col items-center"
             >
-                {/* Profile Header: Photo & Batch Side by Side */}
-                <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-4">
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.5 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5 }}
-                        onMouseEnter={handlePhotoHover}
-                        className="relative w-40 h-40 md:w-52 md:h-52 cursor-pointer group shrink-0"
-                    >
-                        <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
-                        <div className="relative w-full h-full rounded-full border-2 border-white/10 overflow-hidden backdrop-blur-sm bg-white/5 shadow-2xl transition-transform duration-500 group-hover:scale-105 group-hover:border-blue-500/30">
-                            <img
-                                src={PROFILE.profileImage}
-                                alt={PROFILE.name}
-                                className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-500"
-                            />
-                        </div>
-                    </motion.div>
-
-                    <div className="flex flex-col items-start gap-4">
-                        <div className="inline-block px-5 py-2 rounded-full border border-white/10 bg-white/5 text-base font-medium text-blue-400 backdrop-blur-md">
-                            {PROFILE.role}
-                        </div>
-                        <p className="text-zinc-500 font-mono text-sm hidden md:block">Hover for QA Insights →</p>
+                {/* Vertical Profile Section: Photo, then Title, then Name */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    onMouseEnter={handlePhotoHover}
+                    className="relative w-40 h-40 md:w-52 md:h-52 cursor-pointer group"
+                >
+                    <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
+                    <div className="relative w-full h-full rounded-full border-2 border-white/10 overflow-hidden backdrop-blur-sm bg-white/5 shadow-2xl transition-transform duration-500 group-hover:scale-105 group-hover:border-blue-500/30">
+                        <img
+                            src={PROFILE.profileImage}
+                            alt={PROFILE.name}
+                            className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-500"
+                        />
                     </div>
+                </motion.div>
+
+                <div className="inline-block px-5 py-2 rounded-full border border-white/10 bg-white/5 text-base font-medium text-blue-400 backdrop-blur-md">
+                    {PROFILE.role}
                 </div>
 
                 <div className="space-y-6">
@@ -97,7 +88,7 @@ export const Hero = () => {
                     </p>
                 </div>
 
-                <AnimatePresence>
+                <AnimatePresence mode="wait">
                     {toast && (
                         <motion.div
                             key={toast.message}
