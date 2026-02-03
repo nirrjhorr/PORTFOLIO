@@ -291,6 +291,24 @@ export const CERTIFICATIONS = [
         year: "2024",
         color: "bg-red-500",
     },
+    {
+        name: "AWS Educate – Getting Started with Databases",
+        issuer: "Amazon Web Services (AWS)",
+        year: "2023",
+        color: "bg-orange-600",
+    },
+    {
+        name: "Digital Security Essentials",
+        issuer: "MuktoPaath",
+        year: "2024",
+        color: "bg-blue-600",
+    },
+    {
+        name: "EF SET English Certificate (C2 Proficient)",
+        issuer: "EF SET",
+        year: "2024",
+        color: "bg-indigo-600",
+    },
 ];
 
 export const ACHIEVEMENTS = [
