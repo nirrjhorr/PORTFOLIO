@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
   title: "MD Hasan Al Rashid | SQA Engineer",
   description: "Senior SQA Engineer Portfolio - Selenium, Appium, Cypress Automation.",
+  icons: {
+    icon: '/icon.png',
+  },
 };
 
 export default function RootLayout({
