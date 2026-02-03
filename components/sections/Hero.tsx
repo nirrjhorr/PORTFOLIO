@@ -54,15 +54,15 @@ export const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="max-w-4xl space-y-8 relative z-10 flex flex-col items-center"
+                className="max-w-4xl relative z-10 flex flex-col items-center"
             >
-                {/* Vertical Profile Section: Photo, then Title, then Name */}
+                {/* Vertical Profile Section: Photo -> Title -> Name */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
                     onMouseEnter={handlePhotoHover}
-                    className="relative w-40 h-40 md:w-52 md:h-52 cursor-pointer group"
+                    className="relative w-40 h-40 md:w-52 md:h-52 cursor-pointer group mb-6"
                 >
                     <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
                     <div className="relative w-full h-full rounded-full border-2 border-white/10 overflow-hidden backdrop-blur-sm bg-white/5 shadow-2xl transition-transform duration-500 group-hover:scale-105 group-hover:border-blue-500/30">
@@ -74,11 +74,11 @@ export const Hero = () => {
                     </div>
                 </motion.div>
 
-                <div className="inline-block px-5 py-2 rounded-full border border-white/10 bg-white/5 text-base font-medium text-blue-400 backdrop-blur-md">
+                <div className="inline-block px-5 py-2 rounded-full border border-white/10 bg-white/5 text-base font-medium text-blue-400 backdrop-blur-md mb-4">
                     {PROFILE.role}
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-4">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 pb-2 break-words">
                         {PROFILE.name}
                     </h1>
@@ -88,7 +88,7 @@ export const Hero = () => {
                     </p>
                 </div>
 
-                <AnimatePresence mode="wait">
+                <AnimatePresence>
                     {toast && (
                         <motion.div
                             key={toast.message}
