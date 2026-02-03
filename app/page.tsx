@@ -1,10 +1,11 @@
+
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { TechStack } from "@/components/sections/TechStack";
 import { ExperienceTimeline } from "@/components/sections/ExperienceTimeline";
 import { BentoProjects } from "@/components/sections/BentoProjects";
 import { Footer } from "@/components/sections/Footer";
-import { Certifications } from "@/components/sections/Certifications";
+import { EducationCertifications } from "@/components/sections/EducationCertifications";
 
 export default function Home() {
   return (
@@ -18,10 +19,10 @@ export default function Home() {
       <div className="relative z-10 flex flex-col gap-20">
         <Navbar />
         <div id="home"><Hero /></div>
-        <div id="stack"><TechStack /></div>
+        <TechStack />
         <div id="work"><ExperienceTimeline /></div>
-        <BentoProjects />
-        <div id="certifications"><Certifications /></div>
+        <div id="projects"><BentoProjects /></div>
+        <div id="education"><EducationCertifications /></div>
         <div id="contact"><Footer /></div>
       </div>
     </main>

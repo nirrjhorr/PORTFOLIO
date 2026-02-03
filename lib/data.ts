@@ -17,17 +17,11 @@ import {
     SiFacebook,
 } from "react-icons/si";
 import {
-    LocateFixed,
-    Mail,
-    Phone,
-    Linkedin,
-    Github,
-    FileText,
+    Users,
+    FileSpreadsheet,
     Terminal,
     Camera,
     BrainCircuit,
-    Users,
-    FileSpreadsheet,
     Clapperboard
 } from "lucide-react";
 
@@ -76,10 +70,10 @@ export const EXPERIENCE = [
         role: "Associate SQA Engineer",
         period: "Nov 2025 - Present",
         achievements: [
-            "Conduct comprehensive manual testing for web applications, ensuring functional and visual consistency.",
-            "Design and execute detailed test cases for new features, reporting bugs with precise reproduction steps in Jira.",
-            "Perform API testing using Postman to validate endpoints and ensure data integrity.",
-            "Collaborate with developers to assist in debugging and verifying fixes for reported defects.",
+            "Conduct manual testing for web applications to ensure functional consistency.",
+            "Execute test cases for new features and report bugs in Jira.",
+            "Perform API testing using Postman to validate endpoints.",
+            "Collaborate with developers to assist in debugging defects.",
         ],
     },
     {
@@ -87,10 +81,10 @@ export const EXPERIENCE = [
         role: "SQA Engineer",
         period: "Sep 2024 - Oct 2025",
         achievements: [
-            "Executed regression testing cycles before major releases to maintain system stability.",
-            "Conducted performance load testing using JMeter for high-traffic modules.",
-            "Documented test plans and release notes, ensuring clear communication with stakeholders.",
-            "Assisted in the initial setup of automated test scripts using Selenium.",
+            "Executed regression testing cycles before major releases.",
+            "Conducted performance load testing using JMeter.",
+            "Documented test plans and release notes.",
+            "Assisted in automated test script setup with Selenium.",
         ],
     },
 ];
@@ -98,51 +92,66 @@ export const EXPERIENCE = [
 export const PROJECTS = [
     {
         title: "AgroMart",
-        description: "E-commerce platform for agricultural products. Performed extensive manual testing on shopping cart flows and payment gateway integrations.",
+        description: "E-commerce platform for agricultural products. Focused on functional testing and bug reporting.",
         tags: ["Manual Testing", "Jira", "Test Rails"],
         link: "#",
     },
     {
         title: "Vistock",
-        description: "Inventory management system. Responsible for API validation using Postman and ensuring RBAC (Role-Based Access Control) functionality.",
+        description: "Inventory management system. Responsible for API validation and data consistency checks.",
         tags: ["Postman", "API Testing", "Swagger"],
         link: "#",
     },
     {
         title: "HRMaster",
-        description: "HRM solution with employee tracking. Conducted performance testing to handle 500+ concurrent users.",
+        description: "HRM solution with employee tracking. Conducted performance testing/load testing.",
         tags: ["JMeter", "Performance", "MySQL"],
         link: "#",
     },
     {
         title: "EduLearn LMS",
-        description: "Learning Management System. Verified course enrollment workflows and certificate generation logic.",
+        description: "Learning Management System. Verified user workflows and course management features.",
         tags: ["Manual Testing", "Usability", "Bugzilla"],
         link: "#",
     },
     {
         title: "FinTrack",
-        description: "Personal finance tracker. Validated data visualization charts and secure login implementations.",
+        description: "Personal finance tracker. Validated security features and login mechanisms.",
         tags: ["Security Testing", "Owasp ZAP", "Penetration"],
         link: "#",
     },
 ];
 
+export const EDUCATION = [
+    {
+        degree: "Bachelor of Science in Computer Science & Engineering",
+        institution: "Independent University, Bangladesh (IUB)",
+        year: "2019 - 2023",
+        result: "CGPA: 3.52/4.00"
+    },
+    {
+        degree: "Higher Secondary Certificate (HSC)",
+        institution: "Dhaka Residential Model College",
+        year: "2018",
+        result: "GPA: 5.00/5.00"
+    }
+];
+
 export const CERTIFICATIONS = [
     {
-        name: "ISTQB Foundation Level",
+        name: "ISTQB Certified Tester Foundation Level (CTFL)",
         issuer: "ISTQB",
         year: "2024",
         color: "bg-blue-500",
     },
     {
-        name: "Postman API Fundamentals",
+        name: "Postman API Fundamentals Student Expert",
         issuer: "Postman",
         year: "2024",
         color: "bg-orange-500",
     },
     {
-        name: "Selenium Webdriver with Java",
+        name: "Selenium Webdriver with Java for Beginners",
         issuer: "Udemy",
         year: "2023",
         color: "bg-green-500",

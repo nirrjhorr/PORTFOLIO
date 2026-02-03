@@ -19,7 +19,7 @@ export const BentoProjects = () => {
         <section className="py-24 px-4 max-w-[90rem] mx-auto bg-zinc-950 overflow-hidden">
             <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 mb-4">
-                    Recent Work
+                    Projects
                 </h2>
                 <p className="text-zinc-400">Project Highlights & Test Coverage</p>
             </div>
