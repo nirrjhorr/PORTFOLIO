@@ -79,4 +79,14 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  /* Support for custom cursor fallback */
+  @media (min-width: 768px) {
+
+    .custom-cursor-active a,
+    .custom-cursor-active button,
+    .custom-cursor-active [role="button"] {
+      cursor: none !important;
+    }
+  }
 }

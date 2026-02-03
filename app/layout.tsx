@@ -15,6 +15,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { CustomCursor } from "@/components/layout/CustomCursor";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,7 +24,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={cn(inter.variable, "bg-zinc-950 text-white antialiased")}>
+      <body className={cn(inter.variable, "bg-zinc-950 text-white antialiased md:cursor-none")}>
+        <CustomCursor />
         {children}
       </body>
     </html>
