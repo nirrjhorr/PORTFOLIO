@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <body className={cn(inter.variable, "bg-zinc-950 text-white antialiased md:cursor-none")}>
+      <body className={cn(inter.variable, "bg-zinc-950 text-white antialiased md:cursor-none")} suppressHydrationWarning>
         <CustomCursor />
         {children}
       </body>
