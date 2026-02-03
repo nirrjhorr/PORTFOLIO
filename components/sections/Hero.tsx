@@ -8,7 +8,7 @@ import { ArrowDown } from "@gravity-ui/icons";
 import { cn } from "@/lib/utils";
 
 export const Hero = () => {
-    const [toast, setToast] = React.useState<{ message: string; position: 'left' | 'right' } | null>(null);
+    const [toast, setToast] = React.useState<{ message: string; position: 'left' | 'right'; top: string } | null>(null);
     const timeoutRef = React.useRef<NodeJS.Timeout | null>(null);
 
     const handlePhotoHover = () => {
@@ -17,12 +17,14 @@ export const Hero = () => {
         const randomJoke = QA_JOKES[Math.floor(Math.random() * QA_JOKES.length)];
         const positions: ('left' | 'right')[] = ['left', 'right'];
         const randomPosition = positions[Math.floor(Math.random() * positions.length)];
+        // Random top position between 10% and 80% to keep it on screen
+        const randomTop = `${Math.floor(Math.random() * 70) + 10}%`;
 
-        setToast({ message: randomJoke, position: randomPosition });
+        setToast({ message: randomJoke, position: randomPosition, top: randomTop });
 
         timeoutRef.current = setTimeout(() => {
             setToast(null);
-        }, 3000);
+        }, 500);
     };
 
     const getToastVariants = (position: 'left' | 'right') => {
@@ -34,13 +36,12 @@ export const Hero = () => {
         }
     };
 
-    const getToastStyle = (position: 'left' | 'right'): React.CSSProperties => {
-        switch (position) {
-            case 'left':
-                return { left: 0, top: '50%', transform: 'translateY(-50%)' };
-            case 'right':
-                return { right: 0, top: '50%', transform: 'translateY(-50%)' };
+    const getToastStyle = (toastData: { position: 'left' | 'right'; top: string }): React.CSSProperties => {
+        const baseStyle: React.CSSProperties = { top: toastData.top, transform: 'translateY(-50%)' };
+        if (toastData.position === 'left') {
+            return { ...baseStyle, left: 0 };
         }
+        return { ...baseStyle, right: 0 };
     };
 
     return (
@@ -96,7 +97,7 @@ export const Hero = () => {
                             animate={getToastVariants(toast.position).animate}
                             exit={getToastVariants(toast.position).exit}
                             className="fixed z-[9999] pointer-events-none p-6"
-                            style={getToastStyle(toast.position)}
+                            style={getToastStyle(toast)}
                         >
                             <div className="glass-card px-8 py-6 rounded-[2rem] max-w-[320px] text-base font-medium text-white shadow-[0_0_50px_rgba(0,0,0,0.5)] border-blue-500/30 relative">
                                 <div className="absolute -top-1 -left-1 w-3 h-3 bg-blue-500 rounded-full animate-ping" />
