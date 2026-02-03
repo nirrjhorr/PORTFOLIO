@@ -15,6 +15,19 @@ import {
     SiLinkedin,
     SiInstagram,
     SiFacebook,
+    SiPython,
+    SiJavascript,
+    SiHtml5,
+    SiCss3,
+    SiSpringboot,
+    SiTypescript,
+    SiReact,
+    SiNodedotjs,
+    SiExpress,
+    SiMongodb,
+    SiAmazon,
+    SiAngular,
+    SiNestjs,
 } from "react-icons/si";
 import {
     Users,
@@ -22,46 +35,63 @@ import {
     Terminal,
     Camera,
     BrainCircuit,
-    Clapperboard
+    Clapperboard,
+    Layout,
+    CheckSquare,
+    RefreshCw,
+    Activity,
+    Search,
+    FileText,
+    ShieldCheck,
+    Database,
+    Cpu,
+    Webhook,
+    Sparkles,
 } from "lucide-react";
 
 export const PROFILE = {
     name: "MD Hasan Al Rashid",
-    role: "SQA Engineer",
-    summary: "Detail-oriented Software Quality Assurance Engineer specializing in manual testing, API validation (Postman), and performance testing (JMeter). Currently expanding expertise in test automation with Selenium & Cypress.",
+    role: "QA Engineer",
+    summary: "QA Engineer with nearly 2 years of experience testing SaaS-based, multi-tenant platforms, including LMS/LXP, ERP, HR, POS, and e-commerce systems. Skilled in manual, API, regression, and end-to-end testing, test planning, and Agile/Scrum collaboration, with exposure to microservices and performance testing and a growing focus on test automation.",
     location: "Dhaka, Bangladesh",
-    email: "contact@example.com",
-    phone: "+880 1234 567 890",
-    linkedin: "https://linkedin.com/in/nirrjhorr",
+    email: "mdhasanxtech@gmail.com",
+    phone: "+880 1993 324 032",
+    linkedin: "https://www.linkedin.com/in/nirrjhorr",
     github: "https://github.com/nirrjhorr",
     resumeUrl: "/Md_Hasan_Al_Rashid_QA_Resume.pdf",
 };
 
 export const SKILLS = [
-    // Management
+    // Testing Methodologies
+    { name: "Manual Testing", icon: CheckSquare, color: "#4CAF50" },
+    { name: "API Testing", icon: Webhook, color: "#FF6C37" },
+    { name: "Regression Testing", icon: RefreshCw, color: "#2196F3" },
+    { name: "Performance Testing", icon: Activity, color: "#F44336" },
+    { name: "Security Testing", icon: ShieldCheck, color: "#9C27B0" },
+    { name: "Smoke Testing", icon: Search, color: "#FF9800" },
+    { name: "Exploratory Testing", icon: Terminal, color: "#795548" },
+    { name: "Test Case Design", icon: FileText, color: "#607D8B" },
+    // Tools
     { name: "Jira", icon: SiJira, color: "#0052CC" },
-    { name: "Trello", icon: SiTrello, color: "#0052CC" },
-    { name: "Teams", icon: Users, color: "#6264A7" },
-    // API & Performance
     { name: "Postman", icon: SiPostman, color: "#FF6C37" },
-    { name: "Swagger", icon: SiSwagger, color: "#85EA2D" },
     { name: "JMeter", icon: SiApachejmeter, color: "#D22128" },
-    { name: "BlazeMeter", icon: SiBlazemeter, color: "#CA2428" },
-    // Automation (Learning)
     { name: "Selenium", icon: SiSelenium, color: "#43B02A" },
     { name: "Playwright", icon: Clapperboard, color: "#2EAD33" },
-    // DevOps
+    { name: "Swagger", icon: SiSwagger, color: "#85EA2D" },
     { name: "Git", icon: SiGit, color: "#F05032" },
-    { name: "GitLab", icon: SiGitlab, color: "#FC6D26" },
     { name: "GitHub", icon: SiGithub, color: "#181717" },
-    // Docs & Utils
-    { name: "Notion", icon: SiNotion, color: "#000000" },
-    { name: "Excel", icon: FileSpreadsheet, color: "#217346" },
+    { name: "GitLab", icon: SiGitlab, color: "#FC6D26" },
+    // Programming
+    { name: "Python", icon: SiPython, color: "#3776AB" },
+    { name: "Java", icon: Cpu, color: "#007396" }, // SiJava is not in simple-icons sometimes
+    { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
     { name: "MySQL", icon: SiMysql, color: "#4479A1" },
-    { name: "Linux", icon: SiLinux, color: "#FCC624" },
-    { name: "Newman", icon: Terminal, color: "#333333" },
-    { name: "Lightshot", icon: Camera, color: "#8A2BE2" },
+    // Utils
+    { name: "Notion", icon: SiNotion, color: "#000000" },
     { name: "XMind", icon: BrainCircuit, color: "#F05032" },
+    { name: "Linux", icon: SiLinux, color: "#FCC624" },
+    { name: "Prompt Engineering", icon: Sparkles, color: "#FFD700" },
+    { name: "Agile & Scrum", icon: Users, color: "#6264A7" },
 ];
 
 export const EXPERIENCE = [
@@ -70,98 +100,165 @@ export const EXPERIENCE = [
         role: "Associate SQA Engineer",
         period: "Nov 2025 - Present",
         achievements: [
-            "Conduct manual testing for web applications to ensure functional consistency.",
-            "Execute test cases for new features and report bugs in Jira.",
-            "Perform API testing using Postman to validate endpoints.",
-            "Collaborate with developers to assist in debugging defects.",
+            "Ensured quality of SaaS-based, multi-tenant LMS/LXP platforms through manual, regression, UI, API, and data validation testing.",
+            "Performed API testing on microservice-based systems using Postman and Swagger, with backend validation via SQL.",
+            "Used GitLab primarily for version control while working in a CI/CD-enabled environment, collaborating with teams to support release quality.",
+            "Participated in Sprint Planning and Agile/Scrum ceremonies, collaborating through Jira and Notion to manage requirements, testing, and defect tracking across services and tenants.",
+            "Created and maintained test cases, defect reports, and QA documentation, supporting project planning and cross-team collaboration.",
+            "Continuously improving QA practices, with an interest in test automation."
         ],
     },
     {
         company: "Vitasoft Solutions",
-        role: "SQA Engineer",
+        role: "Jr. SQA Engineer",
         period: "Sep 2024 - Oct 2025",
         achievements: [
-            "Executed regression testing cycles before major releases.",
-            "Conducted performance load testing using JMeter.",
-            "Documented test plans and release notes.",
-            "Assisted in automated test script setup with Selenium.",
+            "Wrote and executed test cases for SaaS-based, multi-tenant products, including VIstock (inventory & POS system), HRMaster (HR management software) and Viscon (ERP solution).",
+            "Performed manual, API (Postman), and performance testing (JMeter) to identify defects and improve system performance.",
+            "Created and maintained test plans, test documentation, and user guides to support project delivery and release readiness.",
+            "Logged, tracked, and verified software defects using Jira, collaborating closely with developers in Agile/Scrum sprints.",
+            "Validated end-to-end user workflows across multiple releases, ensuring system stability and data consistency across services.",
+            "Delivered tasks on time and worked effectively under pressure, demonstrating attention to detail and problem-solving."
+        ],
+    },
+    {
+        company: "Freelance",
+        role: "QA Engineer",
+        period: "Jan 2025 - June 2025",
+        achievements: [
+            "Performed manual end-to-end testing for e-commerce web platforms, validating complete user journeys (product browsing, cart, checkout, payments, and order processing).",
+            "Conducted functional, regression, smoke, and exploratory testing to ensure feature stability across releases.",
+            "Validated backend workflows and API responses to ensure data consistency across frontend, inventory, orders, and payment systems.",
+            "Executed UI, cross-browser, and responsive testing to verify compatibility across devices and browsers.",
+            "Tested applications built using WordPress and MERN stack, ensuring correct functionality and integration flows.",
+            "Logged and tracked defects with clear reproduction steps, collaborating closely with developers to verify fixes."
         ],
     },
 ];
 
 export const PROJECTS = [
     {
-        title: "AgroMart",
-        description: "E-commerce platform for agricultural products. Focused on functional testing and bug reporting.",
-        tags: ["Manual Testing", "Jira", "Test Rails"],
+        title: "SodiumLearn || LMS & LXP Platform",
+        description: "Performed manual, regression, and end-to-end testing on a SaaS-based, multi-tenant LMS/LXP platform. Validated frontend-backend integrations in a CI/CD-driven environment using GitLab.",
+        tags: ["Manual Testing", "API Testing", "GitLab", "SaaS"],
         link: "#",
     },
     {
-        title: "Vistock",
-        description: "Inventory management system. Responsible for API validation and data consistency checks.",
-        tags: ["Postman", "API Testing", "Swagger"],
+        title: "AgroMart II | E-commerce Platform",
+        description: "Developed a MERN stack e-commerce platform and performed extensive load and performance testing on key workflows to evaluate system behavior under stress.",
+        tags: ["MongoDB", "Express", "React", "Node", "JMeter"],
         link: "#",
     },
     {
-        title: "HRMaster",
-        description: "HRM solution with employee tracking. Conducted performance testing/load testing.",
-        tags: ["JMeter", "Performance", "MySQL"],
+        title: "Student Hub API | API Test Suite",
+        description: "Created an automated API test suite for CRUD operations and authentication using Postman & Newman. Included data-driven testing and generated detailed HTML reports.",
+        tags: ["Postman", "Newman", "API Automation", "CSV"],
         link: "#",
     },
     {
-        title: "EduLearn LMS",
-        description: "Learning Management System. Verified user workflows and course management features.",
-        tags: ["Manual Testing", "Usability", "Bugzilla"],
+        title: "RESTful Booker || API Testing",
+        description: "Designed and executed automated API tests for booking management, handling environment variables and complex CRUD workflows with high precision.",
+        tags: ["Postman", "Newman", "API Testing"],
         link: "#",
     },
     {
-        title: "FinTrack",
-        description: "Personal finance tracker. Validated security features and login mechanisms.",
-        tags: ["Security Testing", "Owasp ZAP", "Penetration"],
+        title: "VIstock II || POS & Inventory",
+        description: "Designed and executed comprehensive test cases for dashboard, inventory, transactions, and HR modules of a complex POS system. Validated core API endpoints.",
+        tags: ["Manual Testing", "API", "Jira", "Excel"],
+        link: "#",
+    },
+    {
+        title: "HRMaster || HR Management",
+        description: "Verified employee tracking, attendance, payroll, and leave management modules through rigorous manual and API testing to ensure business logic compliance.",
+        tags: ["Manual Testing", "API", "Jira", "Software QA"],
+        link: "#",
+    },
+    {
+        title: "Midnight Feast Pizza || Freelance",
+        description: "Designed and tested a WordPress website for a local business. Performed functional testing on menu browsing, online ordering, and contact forms.",
+        tags: ["WordPress", "Manual Testing", "Web Design"],
+        link: "#",
+    },
+    {
+        title: "Konnect II || Edtech Platform",
+        description: "Conducted manual testing of a social networking platform, covering authentication, profile management, messaging, notifications, and search functions.",
+        tags: ["Jira", "XMind", "Manual Testing", "Usability"],
+        link: "#",
+    },
+    {
+        title: "Dmoney II || Fintech Platform",
+        description: "Tested a digital payment platform focusing on service charges, cashback policies, and loan workflows. Validated functional and business rule compliance.",
+        tags: ["Manual Testing", "Fintech", "XMind", "Excel"],
+        link: "#",
+    },
+    {
+        title: "Fabrilife II || E-commerce",
+        description: "Performed deep manual testing on a major e-commerce platform, identifying over 1000 issues across UI, functional, usability, performance, and security areas.",
+        tags: ["Manual Testing", "Bug Hunting", "Excel", "UI/UX"],
         link: "#",
     },
 ];
 
 export const EDUCATION = [
     {
-        degree: "Bachelor of Science in Computer Science & Engineering",
-        institution: "Independent University, Bangladesh (IUB)",
+        degree: "Bachelor of Computer Science and Engineering",
+        institution: "Daffodil International University",
         year: "2019 - 2023",
-        result: "CGPA: 3.52/4.00"
+        result: "CGPA: 3.59/4.00"
     },
     {
         degree: "Higher Secondary Certificate (HSC)",
-        institution: "Dhaka Residential Model College",
+        institution: "Brahmanbaria Govt. College",
         year: "2018",
-        result: "GPA: 5.00/5.00"
+        result: "GPA: 3.50/5.00"
+    },
+    {
+        degree: "Secondary School Certificate (SSC)",
+        institution: "Agrabad Govt. Colony High School",
+        year: "2016",
+        result: "GPA: 4.89/5.00"
     }
 ];
 
 export const CERTIFICATIONS = [
     {
-        name: "ISTQB Certified Tester Foundation Level (CTFL)",
-        issuer: "ISTQB",
+        name: "SQA Virtual Training Program",
+        issuer: "Skilljobs",
         year: "2024",
         color: "bg-blue-500",
     },
     {
-        name: "Postman API Fundamentals Student Expert",
-        issuer: "Postman",
+        name: "Master Agile & Scrum Basics",
+        issuer: "Udemy",
         year: "2024",
         color: "bg-orange-500",
     },
     {
-        name: "Selenium Webdriver with Java for Beginners",
-        issuer: "Udemy",
-        year: "2023",
+        name: "Project Management Fundamentals",
+        issuer: "IBM SkillsBuild",
+        year: "2024",
         color: "bg-green-500",
     },
+    {
+        name: "Registered Scrum Basics",
+        issuer: "Scrum Inc.",
+        year: "2024",
+        color: "bg-red-500",
+    },
+];
+
+export const ACHIEVEMENTS = [
+    {
+        title: "Runner-Up, DIU Battle of Minds | Vroom",
+        description: "Contributed to the development of an MVP autonomous vehicle project for urban transportation, demonstrated innovation and technical skills, and secured initial funding for the prototype.",
+        year: "2020"
+    }
 ];
 
 export const CONTACT = {
     handle: "@nirrjhorr",
-    email: "contact@example.com",
-    phone: "+880 1234 567 890",
+    email: "mdhasanxtech@gmail.com",
+    phone: "+880 1993 324 032",
     socials: [
         { name: "LinkedIn", href: "https://www.linkedin.com/in/nirrjhorr", icon: SiLinkedin, color: "#0A66C2" },
         { name: "GitHub", href: "https://github.com/nirrjhorr", icon: SiGithub, color: "#ffffff" },

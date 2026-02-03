@@ -40,27 +40,27 @@ export const ExperienceTimeline = () => {
                         {/* Dot */}
                         <div className="absolute left-[14px] top-6 w-3 h-3 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)] z-10 md:left-1/2 md:-ml-1.5 md:top-8" />
 
-                        <div className="md:w-5/12 ml-12 md:ml-0 w-full" /> {/* Spacer */}
+                        <div className="md:w-[48%] ml-12 md:ml-0 w-full" /> {/* Spacer */}
 
-                        <div className="ml-12 md:ml-0 md:w-5/12 w-full bg-zinc-900/40 backdrop-blur border border-white/5 p-6 rounded-2xl hover:border-white/10 transition-colors group">
-                            <div className="flex items-center gap-4 mb-4">
+                        <div className="ml-12 md:ml-0 md:w-[48%] w-full bg-zinc-900/40 backdrop-blur border border-white/5 p-8 rounded-2xl hover:border-white/10 transition-colors group">
+                            <div className="flex items-center gap-5 mb-6">
                                 {/* Logo / Monogram Fallback */}
-                                <div className={cn("w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg", getColor(exp.company))}>
+                                <div className={cn("w-14 h-14 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg", getColor(exp.company))}>
                                     {getInitials(exp.company)}
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-white">{exp.role}</h3>
-                                    <p className="text-zinc-400 font-medium">{exp.company}</p>
+                                    <h3 className="text-2xl font-bold text-white leading-tight">{exp.role}</h3>
+                                    <p className="text-zinc-400 font-medium text-lg">{exp.company}</p>
                                 </div>
                             </div>
 
-                            <span className="text-sm font-mono text-blue-400 mb-4 block border-b border-white/5 pb-2">{exp.period}</span>
+                            <span className="text-sm font-mono text-blue-400 mb-6 block border-b border-white/5 pb-3 italic">{exp.period}</span>
 
-                            <ul className="space-y-2">
+                            <ul className="space-y-4">
                                 {exp.achievements.map((item, i) => (
-                                    <li key={i} className="text-sm text-zinc-400 leading-relaxed flex items-start gap-2 break-words">
-                                        <span className="mt-1.5 w-1 h-1 rounded-full bg-blue-500 shrink-0" />
-                                        <span className="line-clamp-3">{item}</span>
+                                    <li key={i} className="text-base text-zinc-400 leading-relaxed flex items-start gap-3 break-words">
+                                        <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0 shadow-[0_0_5px_rgba(59,130,246,0.5)]" />
+                                        <span>{item}</span>
                                     </li>
                                 ))}
                             </ul>

@@ -19,7 +19,7 @@ export default function Home() {
       <div className="relative z-10 flex flex-col gap-20">
         <Navbar />
         <div id="home"><Hero /></div>
-        <TechStack />
+        <div id="stack"><TechStack /></div>
         <div id="work"><ExperienceTimeline /></div>
         <div id="projects"><BentoProjects /></div>
         <div id="education"><EducationCertifications /></div>
