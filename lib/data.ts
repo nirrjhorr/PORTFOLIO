@@ -142,6 +142,12 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
     {
+        title: "Bug Report Automation | QA Tool",
+        description: "Built a Python-based desktop tool to analyze and visualize bug reports from Excel/CSV files, enabling quick QA insights through an interactive GUI.",
+        tags: ["Python", "Tkinter", "Pandas", "Excel"],
+        link: "#",
+    },
+    {
         title: "SodiumLearn | LMS & LXP Platform",
         description: "Performed manual, regression, and end-to-end testing on a SaaS-based, multi-tenant LMS/LXP platform. Validated frontend-backend integrations in a CI/CD-driven environment using GitLab.",
         tags: ["Manual Testing", "API Testing", "GitLab", "SaaS"],
