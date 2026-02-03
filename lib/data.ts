@@ -197,7 +197,7 @@ export const PROJECTS = [
     },
     {
         title: "Fabrilife | E-commerce",
-        description: "Performed deep manual testing on a major e-commerce platform, identifying 28 bugs across UI, functional, usability, performance, and security areas.",
+        description: "Performed deep manual testing on a major e-commerce platform, identifying bugs across UI, functional, usability, performance, and security areas.",
         tags: ["Manual Testing", "Bug Hunting", "Excel", "UI/UX"],
         link: "#",
     },
