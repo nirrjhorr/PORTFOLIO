@@ -1,8 +1,10 @@
 "use client";
 
 import React from "react";
+import { Button, Icon } from "@gravity-ui/uikit";
 import { motion } from "framer-motion";
 import { PROFILE } from "@/lib/data";
+import { ArrowDown } from "@gravity-ui/icons";
 import { cn } from "@/lib/utils";
 
 export const Hero = () => {
@@ -47,6 +49,14 @@ export const Hero = () => {
                     {PROFILE.summary}
                 </p>
 
+                <div className="flex items-center justify-center gap-4 mt-8">
+                    <a href={PROFILE.resumeUrl} download>
+                        <Button view="action" size="xl" className="rounded-full px-8 py-6 text-lg shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] transition-all">
+                            Download Resume
+                            <Icon data={ArrowDown} size={18} className="ml-2" />
+                        </Button>
+                    </a>
+                </div>
             </motion.div>
         </section>
     );
