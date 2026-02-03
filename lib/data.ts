@@ -114,7 +114,7 @@ export const EXPERIENCE = [
         company: "Vitasoft Solutions",
         role: "Jr. SQA Engineer",
         period: "Sep 2024 - Oct 2025",
-        icon: Layout,
+        icon: Database,
         achievements: [
             "Wrote and executed test cases for SaaS-based, multi-tenant products, including VIstock (inventory & POS system), HRMaster (HR management software) and Viscon (ERP solution).",
             "Performed manual, API (Postman), and performance testing (JMeter) to identify defects and improve system performance.",
