@@ -232,6 +232,18 @@ export const CERTIFICATIONS = [
         color: "bg-blue-500",
     },
     {
+        name: "SQA & Cybersecurity",
+        issuer: "IT Training BD",
+        year: "2024",
+        color: "bg-zinc-700",
+    },
+    {
+        name: "Mastering Cybersecurity: Essential Knowledge and Techniques",
+        issuer: "Udemy",
+        year: "2024",
+        color: "bg-purple-600",
+    },
+    {
         name: "Master Agile & Scrum Basics",
         issuer: "Udemy",
         year: "2024",
