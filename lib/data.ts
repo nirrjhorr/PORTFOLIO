@@ -59,6 +59,7 @@ export const PROFILE = {
     linkedin: "https://www.linkedin.com/in/nirrjhorr",
     github: "https://github.com/nirrjhorr",
     resumeUrl: "/Md_Hasan_Al_Rashid_QA_Resume.pdf",
+    profileImage: "/profile.jpg",
 };
 
 export const SKILLS = [

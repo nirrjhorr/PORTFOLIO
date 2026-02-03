@@ -19,6 +19,22 @@ export const Hero = () => {
                 transition={{ duration: 0.6 }}
                 className="max-w-4xl space-y-8 relative z-10"
             >
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-8"
+                >
+                    <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-2xl animate-pulse" />
+                    <div className="relative w-full h-full rounded-full border-2 border-white/10 overflow-hidden backdrop-blur-sm bg-white/5 shadow-2xl">
+                        <img
+                            src={PROFILE.profileImage}
+                            alt={PROFILE.name}
+                            className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-500"
+                        />
+                    </div>
+                </motion.div>
+
                 <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-sm font-medium text-blue-400 mb-6 backdrop-blur-md">
                     {PROFILE.role}
                 </div>
