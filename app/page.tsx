@@ -4,6 +4,7 @@ import { TechStack } from "@/components/sections/TechStack";
 import { ExperienceTimeline } from "@/components/sections/ExperienceTimeline";
 import { BentoProjects } from "@/components/sections/BentoProjects";
 import { Footer } from "@/components/sections/Footer";
+import { Certifications } from "@/components/sections/Certifications";
 
 export default function Home() {
   return (
@@ -16,11 +17,12 @@ export default function Home() {
 
       <div className="relative z-10 flex flex-col gap-20">
         <Navbar />
-        <Hero />
-        <TechStack />
-        <ExperienceTimeline />
+        <div id="home"><Hero /></div>
+        <div id="stack"><TechStack /></div>
+        <div id="work"><ExperienceTimeline /></div>
         <BentoProjects />
-        <Footer />
+        <div id="certifications"><Certifications /></div>
+        <div id="contact"><Footer /></div>
       </div>
     </main>
   );

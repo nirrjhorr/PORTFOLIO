@@ -20,7 +20,7 @@ const getColor = (name: string) => {
 
 export const ExperienceTimeline = () => {
     return (
-        <section className="py-24 px-4 max-w-5xl mx-auto">
+        <section className="py-24 px-4 max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 mb-16 text-center">
                 Experience
             </h2>

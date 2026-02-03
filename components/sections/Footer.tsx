@@ -6,7 +6,17 @@ import { CONTACT, PROFILE } from "@/lib/data";
 
 export const Footer = () => {
     return (
-        <footer className="py-12 flex flex-col items-center justify-center gap-8 px-4">
+        <footer className="py-12 flex flex-col items-center justify-center gap-6 px-4">
+
+            {/* Contact Info */}
+            <div className="text-center space-y-2 mb-4">
+                <a href={`mailto:${CONTACT.email}`} className="block text-zinc-400 hover:text-white transition-colors">
+                    {CONTACT.email}
+                </a>
+                <a href={`tel:${CONTACT.phone}`} className="block text-zinc-400 hover:text-white transition-colors">
+                    {CONTACT.phone}
+                </a>
+            </div>
 
             {/* Dock Container */}
             <div className="flex items-end gap-4 px-6 py-4 rounded-full bg-black/20 backdrop-blur-md border border-white/5 shadow-2xl">
@@ -15,7 +25,7 @@ export const Footer = () => {
                 ))}
             </div>
 
-            <div className="text-zinc-600 text-sm">
+            <div className="text-zinc-600 text-sm mt-4">
                 © {new Date().getFullYear()} {PROFILE.name}. All rights reserved.
             </div>
         </footer>

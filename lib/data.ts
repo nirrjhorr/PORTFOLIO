@@ -33,10 +33,11 @@ import {
 
 export const PROFILE = {
     name: "MD Hasan Al Rashid",
-    role: "Associate SQA Engineer",
-    summary: "Detail-oriented Associate Software Quality Assurance Engineer with extensive experience in automation and manual testing. Expert in building robust test frameworks using Selenium, Appium, and Cypress to ensure flawless software delivery.",
+    role: "SQA Engineer",
+    summary: "Detail-oriented Software Quality Assurance Engineer specializing in manual testing, API validation (Postman), and performance testing (JMeter). Currently expanding expertise in test automation with Selenium & Cypress.",
     location: "Dhaka, Bangladesh",
     email: "contact@example.com",
+    phone: "+880 1234 567 890",
     linkedin: "https://linkedin.com/in/nirrjhorr",
     github: "https://github.com/nirrjhorr",
     resumeUrl: "/Md_Hasan_Al_Rashid_QA_Resume.pdf",
@@ -52,7 +53,7 @@ export const SKILLS = [
     { name: "Swagger", icon: SiSwagger, color: "#85EA2D" },
     { name: "JMeter", icon: SiApachejmeter, color: "#D22128" },
     { name: "BlazeMeter", icon: SiBlazemeter, color: "#CA2428" },
-    // Automation
+    // Automation (Learning)
     { name: "Selenium", icon: SiSelenium, color: "#43B02A" },
     { name: "Playwright", icon: Clapperboard, color: "#2EAD33" },
     // DevOps
@@ -75,9 +76,10 @@ export const EXPERIENCE = [
         role: "Associate SQA Engineer",
         period: "Nov 2025 - Present",
         achievements: [
-            "Led the transition from manual to automated testing coverage.",
-            "Implemented rigorous API testing protocols using Postman and Swagger.",
-            "Managed defect lifecycles using Jira and improved team velocity.",
+            "Conduct comprehensive manual testing for web applications, ensuring functional and visual consistency.",
+            "Design and execute detailed test cases for new features, reporting bugs with precise reproduction steps in Jira.",
+            "Perform API testing using Postman to validate endpoints and ensure data integrity.",
+            "Collaborate with developers to assist in debugging and verifying fixes for reported defects.",
         ],
     },
     {
@@ -85,9 +87,10 @@ export const EXPERIENCE = [
         role: "SQA Engineer",
         period: "Sep 2024 - Oct 2025",
         achievements: [
-            "Developed automated test scripts using Selenium and Java.",
-            "Conducted performance testing for high-traffic modules using JMeter.",
-            "Collaborated with developers to ensure zero-bug releases.",
+            "Executed regression testing cycles before major releases to maintain system stability.",
+            "Conducted performance load testing using JMeter for high-traffic modules.",
+            "Documented test plans and release notes, ensuring clear communication with stakeholders.",
+            "Assisted in the initial setup of automated test scripts using Selenium.",
         ],
     },
 ];
@@ -95,26 +98,61 @@ export const EXPERIENCE = [
 export const PROJECTS = [
     {
         title: "AgroMart",
-        description: "E-commerce platform for agricultural products.",
-        tags: ["Selenium", "Java", "TestNG"],
+        description: "E-commerce platform for agricultural products. Performed extensive manual testing on shopping cart flows and payment gateway integrations.",
+        tags: ["Manual Testing", "Jira", "Test Rails"],
         link: "#",
     },
     {
         title: "Vistock",
-        description: "Inventory management system with proper QA coverage.",
-        tags: ["Postman", "API Testing", "JMeter"],
+        description: "Inventory management system. Responsible for API validation using Postman and ensuring RBAC (Role-Based Access Control) functionality.",
+        tags: ["Postman", "API Testing", "Swagger"],
         link: "#",
     },
     {
         title: "HRMaster",
-        description: "HRM solution validated for high concurrency.",
-        tags: ["Cypress", "JavaScript", "Manual Test"],
+        description: "HRM solution with employee tracking. Conducted performance testing to handle 500+ concurrent users.",
+        tags: ["JMeter", "Performance", "MySQL"],
         link: "#",
+    },
+    {
+        title: "EduLearn LMS",
+        description: "Learning Management System. Verified course enrollment workflows and certificate generation logic.",
+        tags: ["Manual Testing", "Usability", "Bugzilla"],
+        link: "#",
+    },
+    {
+        title: "FinTrack",
+        description: "Personal finance tracker. Validated data visualization charts and secure login implementations.",
+        tags: ["Security Testing", "Owasp ZAP", "Penetration"],
+        link: "#",
+    },
+];
+
+export const CERTIFICATIONS = [
+    {
+        name: "ISTQB Foundation Level",
+        issuer: "ISTQB",
+        year: "2024",
+        color: "bg-blue-500",
+    },
+    {
+        name: "Postman API Fundamentals",
+        issuer: "Postman",
+        year: "2024",
+        color: "bg-orange-500",
+    },
+    {
+        name: "Selenium Webdriver with Java",
+        issuer: "Udemy",
+        year: "2023",
+        color: "bg-green-500",
     },
 ];
 
 export const CONTACT = {
     handle: "@nirrjhorr",
+    email: "contact@example.com",
+    phone: "+880 1234 567 890",
     socials: [
         { name: "LinkedIn", href: "https://www.linkedin.com/in/nirrjhorr", icon: SiLinkedin, color: "#0A66C2" },
         { name: "GitHub", href: "https://github.com/nirrjhorr", icon: SiGithub, color: "#ffffff" },
