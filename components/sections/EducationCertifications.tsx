@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CERTIFICATIONS, EDUCATION, ACHIEVEMENTS } from "@/lib/data";
-import { GraduationCap, Award, Calendar, BookOpen, Trophy, Sparkles } from "lucide-react";
+import { GraduationCap, Award, Calendar, BookOpen, Trophy, Sparkles, Bug } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export const EducationCertifications = () => {
@@ -67,8 +67,8 @@ export const EducationCertifications = () => {
                 {/* Certifications Column */}
                 <div className="space-y-10">
                     <div className="flex items-center gap-4 mb-8">
-                        <div className="p-3 rounded-2xl bg-purple-500/10 border border-purple-500/20">
-                            <Award className="w-8 h-8 text-purple-400" />
+                        <div className="p-3 rounded-2xl bg-amber-500/10 border border-amber-500/20">
+                            <Bug className="w-8 h-8 text-amber-400" />
                         </div>
                         <h3 className="text-3xl font-bold text-white tracking-tight">Certifications</h3>
                     </div>
@@ -81,13 +81,13 @@ export const EducationCertifications = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className="group relative overflow-hidden bg-zinc-900/40 backdrop-blur-md border border-white/5 p-8 rounded-[2rem] hover:border-purple-500/30 transition-all duration-500"
+                                className="group relative overflow-hidden bg-zinc-900/40 backdrop-blur-md border border-white/5 p-8 rounded-[2rem] hover:border-amber-500/30 transition-all duration-500"
                             >
-                                <div className="absolute -top-10 -right-10 w-32 h-32 bg-purple-500/20 blur-[80px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                                <div className="absolute -top-10 -right-10 w-32 h-32 bg-amber-500/20 blur-[80px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
 
                                 <div className="relative z-10 flex flex-col h-full justify-between gap-6">
                                     <div>
-                                        <h4 className="text-xl font-bold text-white mb-2 leading-tight group-hover:text-purple-400 transition-colors">
+                                        <h4 className="text-xl font-bold text-white mb-2 leading-tight group-hover:text-amber-400 transition-colors">
                                             {cert.name}
                                         </h4>
                                         <div className="text-zinc-400 font-medium flex items-center gap-2">
