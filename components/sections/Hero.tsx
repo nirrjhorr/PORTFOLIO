@@ -25,7 +25,7 @@ export const Hero = () => {
                     {PROFILE.role}
                 </div>
 
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 pb-4">
+                <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 pb-4 break-words">
                     {PROFILE.name}
                 </h1>
 

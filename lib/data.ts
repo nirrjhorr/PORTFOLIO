@@ -12,6 +12,9 @@ import {
     SiNotion,
     SiMysql,
     SiLinux,
+    SiLinkedin,
+    SiInstagram,
+    SiFacebook,
 } from "react-icons/si";
 import {
     LocateFixed,
@@ -119,5 +122,3 @@ export const CONTACT = {
         { name: "Facebook", href: "https://facebook.com/nirrjhorr", icon: SiFacebook, color: "#1877F2" },
     ]
 };
-
-import { SiLinkedin, SiInstagram, SiFacebook } from "react-icons/si";

@@ -58,9 +58,9 @@ export const ExperienceTimeline = () => {
 
                             <ul className="space-y-2">
                                 {exp.achievements.map((item, i) => (
-                                    <li key={i} className="text-sm text-zinc-400 leading-relaxed flex items-start gap-2">
+                                    <li key={i} className="text-sm text-zinc-400 leading-relaxed flex items-start gap-2 break-words">
                                         <span className="mt-1.5 w-1 h-1 rounded-full bg-blue-500 shrink-0" />
-                                        {item}
+                                        <span className="line-clamp-3">{item}</span>
                                     </li>
                                 ))}
                             </ul>

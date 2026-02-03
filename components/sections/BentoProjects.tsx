@@ -58,7 +58,7 @@ const HoverCard = ({ project, index }: { project: any; index: number }) => {
                 <Card className="h-full p-6 bg-zinc-900/50 border-white/10 overflow-hidden relative backdrop-blur-sm flex flex-col justify-between group-hover:border-white/20 transition-colors" view="outlined" type="container">
                     <div>
                         <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
-                        <p className="text-zinc-400 mb-6 leading-relaxed text-sm">
+                        <p className="text-zinc-400 mb-6 leading-relaxed text-sm line-clamp-3">
                             {project.description}
                         </p>
 
