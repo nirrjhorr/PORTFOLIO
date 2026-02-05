@@ -3,17 +3,21 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MoreHorizontal, X } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = React.useState(false);
+    const pathname = usePathname();
+    const isHomePage = pathname === "/";
 
     const navLinks = [
-        { href: "#home", label: "Home" },
-        { href: "#stack", label: "Stack" },
-        { href: "#work", label: "Work" },
-        { href: "#projects", label: "Projects" },
-        { href: "#education", label: "Education" },
-        { href: "#contact", label: "Contact" },
+        { href: isHomePage ? "#home" : "/#home", label: "Home" },
+        { href: isHomePage ? "#work" : "/#work", label: "Work" },
+        { href: isHomePage ? "#projects" : "/#projects", label: "Projects" },
+        { href: isHomePage ? "#education" : "/#education", label: "Education" },
+        { href: isHomePage ? "#contact" : "/#contact", label: "Contact" },
     ];
 
     return (
@@ -26,7 +30,11 @@ export const Navbar = () => {
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center gap-6">
                     {navLinks.map((link) => (
-                        <a key={link.href} href={link.href} className="text-base font-semibold text-white hover:text-blue-400 transition-colors">
+                        <a
+                            key={link.href}
+                            href={link.href}
+                            className="text-base font-semibold text-white hover:text-blue-400 transition-colors"
+                        >
                             {link.label}
                         </a>
                     ))}
@@ -70,3 +78,5 @@ export const Navbar = () => {
         </motion.header>
     );
 };
+
+
