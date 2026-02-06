@@ -5,8 +5,8 @@ import { SKILLS } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 export const TechStack = () => {
-    // Duplicate skills for seamless infinite scroll (multiple times for smoothness)
-    const scrollSkills = [...SKILLS, ...SKILLS, ...SKILLS];
+    // Duplicate skills for seamless infinite scroll
+    const scrollSkills = [...SKILLS, ...SKILLS];
 
     return (
         <section className="py-24 px-4 overflow-hidden bg-zinc-950">

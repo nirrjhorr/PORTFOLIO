@@ -3,7 +3,7 @@
 @theme {
   --font-sans: var(--font-inter);
 
-  --animate-infinite-scroll: infinite-scroll 25s linear infinite;
+  --animate-infinite-scroll: infinite-scroll 60s linear infinite;
   --animate-fade-in: fade-in 0.5s ease-out forwards;
   --animate-spotlight: spotlight 2s ease .75s 1 forwards;
 
@@ -13,7 +13,7 @@
     }
 
     to {
-      transform: translateX(-100%);
+      transform: translateX(-50%);
     }
   }
 
