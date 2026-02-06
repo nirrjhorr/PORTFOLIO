@@ -3,7 +3,7 @@
 @theme {
   --font-sans: var(--font-inter);
 
-  --animate-infinite-scroll: infinite-scroll 10s linear infinite;
+  --animate-infinite-scroll: infinite-scroll 7s linear infinite;
   --animate-fade-in: fade-in 0.5s ease-out forwards;
   --animate-spotlight: spotlight 2s ease .75s 1 forwards;
 
