@@ -26,7 +26,7 @@ export const Hero = () => {
 
         timeoutRef.current = setTimeout(() => {
             setToast(null);
-        }, 1200);
+        }, 1500);
     };
 
     const getToastVariants = (position: 'left' | 'right') => {
