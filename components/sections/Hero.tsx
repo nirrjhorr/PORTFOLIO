@@ -109,11 +109,30 @@ export const Hero = () => {
                     )}
                 </AnimatePresence>
                 <div className="flex flex-col items-center justify-center gap-4 mt-8">
-                    <a href={PROFILE.resumeUrl} download>
-                        <Button view="action" size="xl" className="rounded-full px-8 py-6 text-lg shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] transition-all">
-                            Download Resume
-                            <Icon data={ArrowDown} size={18} className="ml-2" />
-                        </Button>
+                    <a href={PROFILE.resumeUrl} download className="inline-block">
+                        <motion.div
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.98 }}
+                            className="relative group overflow-hidden rounded-full inline-block shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] transition-shadow duration-300"
+                        >
+                            {/* Animated Shimmer Effect */}
+                            <motion.div
+                                initial={{ x: "-100%" }}
+                                animate={{ x: "200%" }}
+                                transition={{
+                                    repeat: Infinity,
+                                    duration: 3,
+                                    ease: "linear",
+                                    repeatDelay: 2
+                                }}
+                                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 z-10"
+                            />
+
+                            <Button view="action" size="xl" className="rounded-full px-8 py-6 text-lg transition-all relative z-20">
+                                Download Resume
+                                <Icon data={ArrowDown} size={18} className="ml-2" />
+                            </Button>
+                        </motion.div>
                     </a>
                     <Link href="/posts">
                         <motion.div
