@@ -119,7 +119,7 @@ export const Hero = () => {
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.98 }}
-                            className="relative group overflow-hidden rounded-full"
+                            className="relative group overflow-hidden rounded-full inline-block shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:shadow-[0_0_35px_rgba(255,191,0,0.6)] transition-shadow duration-300"
                         >
                             {/* Animated Shimmer Effect */}
                             <motion.div
@@ -134,7 +134,7 @@ export const Hero = () => {
                                 className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 z-10"
                             />
 
-                            <Button size="xl" className="rounded-full px-10 py-6 text-lg bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-white border-2 border-amber-200/50 hover:border-amber-300 shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:shadow-[0_0_35px_rgba(255,191,0,0.6)] transition-all duration-300 uppercase tracking-widest font-bold">
+                            <Button size="xl" className="rounded-full px-10 py-6 text-lg bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-white border-2 border-amber-200/50 hover:border-amber-300 transition-all duration-300 uppercase tracking-widest font-bold">
                                 My Articles!
                             </Button>
                         </motion.div>
