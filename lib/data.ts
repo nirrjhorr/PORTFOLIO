@@ -107,6 +107,7 @@ export const SKILLS = [
     { name: "Linux", icon: SiLinux, color: "#FCC624" },
     { name: "Prompt Engineering", icon: Sparkles, color: "#FFD700" },
     { name: "Agile & Scrum", icon: Users, color: "#6264A7" },
+    { name: "Project Management", icon: FileSpreadsheet, color: "#107C10" },
 ];
 
 export const EXPERIENCE = [
