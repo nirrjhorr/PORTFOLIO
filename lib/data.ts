@@ -47,6 +47,8 @@ import {
     Cpu,
     Webhook,
     Sparkles,
+    UserCheck,
+    CheckCircle,
 } from "lucide-react";
 
 export const PROFILE = {
@@ -67,6 +69,8 @@ export const SKILLS = [
     { name: "Manual Testing", icon: CheckSquare, color: "#4CAF50" },
     { name: "API Testing", icon: Webhook, color: "#FF6C37" },
     { name: "Regression Testing", icon: RefreshCw, color: "#2196F3" },
+    { name: "UAT (User Acceptance)", icon: UserCheck, color: "#E91E63" },
+    { name: "Sanity Testing", icon: CheckCircle, color: "#009688" },
     { name: "Performance Testing", icon: Activity, color: "#F44336" },
     { name: "Security Testing", icon: ShieldCheck, color: "#9C27B0" },
     { name: "Smoke Testing", icon: Search, color: "#FF9800" },
