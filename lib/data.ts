@@ -49,6 +49,9 @@ import {
     Sparkles,
     UserCheck,
     CheckCircle,
+    Bug,
+    ListChecks,
+    Gauge,
 } from "lucide-react";
 
 export const PROFILE = {
@@ -75,11 +78,18 @@ export const SKILLS = [
     { name: "Security Testing", icon: ShieldCheck, color: "#9C27B0" },
     { name: "Smoke Testing", icon: Search, color: "#FF9800" },
     { name: "Exploratory Testing", icon: Terminal, color: "#795548" },
+    { name: "Functional Testing", icon: ListChecks, color: "#8BC34A" },
+    { name: "Non-Functional Testing", icon: Gauge, color: "#607D8B" },
+    { name: "Bug Reporting", icon: Bug, color: "#F44336" },
     { name: "Test Case Design", icon: FileText, color: "#607D8B" },
     // Tools
     { name: "Jira", icon: SiJira, color: "#0052CC" },
+    { name: "Trello", icon: SiTrello, color: "#0079BF" },
+    { name: "MS Teams", icon: Users, color: "#6264A7" },
     { name: "Postman", icon: SiPostman, color: "#FF6C37" },
+    { name: "Newman", icon: SiPostman, color: "#3C873A" },
     { name: "GitLab", icon: SiGitlab, color: "#FC6D26" },
+    { name: "Blazemeter", icon: SiBlazemeter, color: "#CA3C25" },
     { name: "JMeter", icon: SiApachejmeter, color: "#D22128" },
     { name: "Selenium", icon: SiSelenium, color: "#43B02A" },
     { name: "Playwright", icon: Clapperboard, color: "#2EAD33" },
