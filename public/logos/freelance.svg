@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Paper Plane Body -->
+  <path d="M10 50 L90 10 L50 90 L45 55 Z" fill="#00C2FF"/>
+  <!-- Fold/Shadow Detail -->
+  <path d="M45 55 L90 10" stroke="#0099CC" stroke-width="1"/>
+  <path d="M10 50 L45 55" fill="#00A3D9" opacity="0.3"/>
+  <!-- Trailing Lines for Motion -->
+  <path d="M15 75 L30 65" stroke="#00C2FF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M5 85 L25 72" stroke="#00C2FF" stroke-width="6" stroke-linecap="round"/>
+</svg>

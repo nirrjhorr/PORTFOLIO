@@ -45,11 +45,23 @@ export const ExperienceTimeline = () => {
                         <div className="ml-12 md:ml-0 md:w-[48%] w-full bg-zinc-900/40 backdrop-blur border border-white/5 p-8 rounded-2xl hover:border-white/10 transition-colors group">
                             <div className="flex items-center gap-5 mb-6">
                                 {/* Logo / Monogram Fallback */}
-                                <div className={cn("w-14 h-14 rounded-full flex items-center justify-center text-white shadow-lg shrink-0", getColor(exp.company))}>
-                                    {exp.icon ? (
-                                        <exp.icon size={28} />
+                                {/* Logo / Monogram Fallback */}
+                                {/* Logo / Monogram Fallback */}
+                                <div className={cn("w-20 h-20 rounded-full flex items-center justify-center bg-white shadow-lg shrink-0 overflow-hidden relative border-4 border-white/10", !exp.logo && getColor(exp.company))}>
+                                    {exp.logo ? (
+                                        <div className="w-full h-full p-3 bg-white flex items-center justify-center">
+                                            <img
+                                                src={exp.logo}
+                                                alt={exp.company}
+                                                className="w-full h-full object-contain"
+                                            />
+                                        </div>
                                     ) : (
-                                        <span className="font-bold text-xl">{getInitials(exp.company)}</span>
+                                        exp.icon ? (
+                                            <exp.icon size={32} className="text-white" />
+                                        ) : (
+                                            <span className="font-bold text-2xl text-white">{getInitials(exp.company)}</span>
+                                        )
                                     )}
                                 </div>
                                 <div>
