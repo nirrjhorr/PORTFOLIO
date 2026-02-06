@@ -101,7 +101,7 @@ export const EXPERIENCE = [
         role: "Associate SQA Engineer",
         period: "Nov 2025 - Present",
         icon: BrainCircuit,
-        logo: "/logos/sodiumlearn.svg",
+        logo: "/logos/sodiumlearn.png",
         achievements: [
             "Ensured quality of SaaS-based, multi-tenant LMS/LXP platforms through manual, regression, UI, API, and data validation testing.",
             "Performed API testing on microservice-based systems using Postman and Swagger, with backend validation via SQL.",
@@ -116,7 +116,7 @@ export const EXPERIENCE = [
         role: "Jr. SQA Engineer",
         period: "Sep 2024 - Oct 2025",
         icon: Database,
-        logo: "/logos/vitasoft.svg",
+        logo: "/logos/vitasoft.png",
         achievements: [
             "Wrote and executed test cases for SaaS-based, multi-tenant products, including VIstock (inventory & POS system), HRMaster (HR management software) and Viscon (ERP solution).",
             "Performed manual, API (Postman), and performance testing (JMeter) to identify defects and improve system performance.",
@@ -131,7 +131,7 @@ export const EXPERIENCE = [
         role: "QA Engineer",
         period: "Jan 2025 - June 2025",
         icon: Terminal,
-        logo: "/logos/freelance.svg",
+        logo: "/logos/freelance.png",
         achievements: [
             "Performed manual end-to-end testing for e-commerce web platforms, validating complete user journeys (product browsing, cart, checkout, payments, and order processing).",
             "Conducted functional, regression, smoke, and exploratory testing to ensure feature stability across releases.",
