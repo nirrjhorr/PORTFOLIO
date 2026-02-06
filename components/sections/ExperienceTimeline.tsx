@@ -49,7 +49,7 @@ export const ExperienceTimeline = () => {
                                 {/* Logo / Monogram Fallback */}
                                 <div className={cn("w-20 h-20 rounded-full flex items-center justify-center bg-white shadow-lg shrink-0 overflow-hidden relative border-4 border-white/10", !exp.logo && getColor(exp.company))}>
                                     {exp.logo ? (
-                                        <div className="w-full h-full p-3 bg-white flex items-center justify-center">
+                                        <div className="w-full h-full p-1 bg-white flex items-center justify-center">
                                             <img
                                                 src={exp.logo}
                                                 alt={exp.company}
