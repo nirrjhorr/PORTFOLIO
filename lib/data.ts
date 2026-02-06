@@ -75,13 +75,13 @@ export const SKILLS = [
     // Tools
     { name: "Jira", icon: SiJira, color: "#0052CC" },
     { name: "Postman", icon: SiPostman, color: "#FF6C37" },
+    { name: "GitLab", icon: SiGitlab, color: "#FC6D26" },
     { name: "JMeter", icon: SiApachejmeter, color: "#D22128" },
     { name: "Selenium", icon: SiSelenium, color: "#43B02A" },
     { name: "Playwright", icon: Clapperboard, color: "#2EAD33" },
     { name: "Swagger", icon: SiSwagger, color: "#85EA2D" },
     { name: "Git", icon: SiGit, color: "#F05032" },
     { name: "GitHub", icon: SiGithub, color: "#181717" },
-    { name: "GitLab", icon: SiGitlab, color: "#FC6D26" },
     // Programming
     { name: "Python", icon: SiPython, color: "#3776AB" },
     { name: "Java", icon: Cpu, color: "#007396" }, // SiJava is not in simple-icons sometimes
