@@ -12,7 +12,7 @@ export const PostCard: React.FC<PostCardProps> = ({ post }) => {
     return (
         <Link href={`/posts/${post.slug}`}>
             <div className="group relative overflow-hidden rounded-3xl glass-card transition-all duration-300 hover:border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 h-full flex flex-col">
-                {/* Cover Image */}
+                {/* Cover Image - Cropped for card preview consistency */}
                 <div className="relative h-48 w-full overflow-hidden">
                     <img
                         src={post.coverImage}

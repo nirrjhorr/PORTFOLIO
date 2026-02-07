@@ -46,11 +46,12 @@ export default async function PostDetail({ params }: { params: Promise<{ slug: s
                     <h1 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tight leading-tight">
                         {post.title}
                     </h1>
-                    <div className="relative aspect-[21/9] w-full overflow-hidden rounded-3xl border border-white/10">
+                    {/* Cover Image - Full uncropped display for content clarity */}
+                    <div className="relative w-full overflow-hidden rounded-3xl border border-white/10 bg-zinc-900/50">
                         <img
                             src={post.coverImage}
                             alt={post.title}
-                            className="w-full h-full object-cover"
+                            className="w-full h-auto object-contain max-h-[600px] mx-auto"
                         />
                     </div>
                 </header>
