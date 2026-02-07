@@ -3,7 +3,7 @@ title: "Antigravity: A Simple and Useful AI IDE from Google"
 date: "2026-02-07"
 excerpt: "AI tools for developers are everywhere now, but most don't change how you build things. Antigravity feels different—not because it's magical, but because it's practical."
 tags: ["AI", "Development Tools", "Productivity", "Web Development"]
-coverImage: "/images/posts/antigravity-ide.png"
+coverImage: "/images/posts/antigravity-ai-ide.png"
 ---
 
 ## Introduction
