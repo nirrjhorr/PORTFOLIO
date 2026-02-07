@@ -144,7 +144,7 @@ export const EducationCertifications = () => {
                         <h3 className="text-3xl font-bold text-white tracking-tight">Key Achievements</h3>
                     </div>
 
-                    <div className="grid grid-cols-1 gap-6 max-w-4xl mx-auto">
+                    <div className="grid grid-cols-1 gap-6 max-w-5xl mx-auto">
                         {ACHIEVEMENTS.map((ach, index) => (
                             <motion.div
                                 key={index}
@@ -160,7 +160,7 @@ export const EducationCertifications = () => {
                                 <h4 className="text-2xl font-bold text-white mb-3 group-hover:text-[#ff0045] transition-colors">
                                     {ach.title}
                                 </h4>
-                                <p className="text-zinc-400 text-lg leading-relaxed max-w-2xl mx-auto">
+                                <p className="text-zinc-400 text-lg leading-relaxed max-w-4xl mx-auto">
                                     {ach.description}
                                 </p>
                                 <div className="mt-6 inline-block px-4 py-1.5 rounded-full bg-[#ff0045]/10 border border-[#ff0045]/20 text-[#ff0045] font-mono text-sm">

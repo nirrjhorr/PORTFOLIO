@@ -8,6 +8,7 @@ import { ArrowDown } from "@gravity-ui/icons";
 import { cn } from "@/lib/utils";
 
 import Link from "next/link";
+import { Camera, Monitor, Music, Zap, Briefcase } from "lucide-react";
 
 export const Hero = () => {
     const [toast, setToast] = React.useState<{ message: string; position: 'left' | 'right'; top: string } | null>(null);
@@ -47,7 +48,7 @@ export const Hero = () => {
     };
 
     return (
-        <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-20 relative overflow-hidden bg-zinc-950">
+        <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-32 relative overflow-hidden bg-zinc-950">
             <Spotlight
                 className="-top-40 left-0 md:left-60 md:-top-20"
                 fill="white"
@@ -86,7 +87,7 @@ export const Hero = () => {
                         {PROFILE.name}
                     </h1>
 
-                    <p className="text-lg md:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed px-4">
+                    <p className="text-lg md:text-xl text-zinc-400 max-w-5xl mx-auto leading-relaxed px-4 text-left">
                         {PROFILE.summary}
                     </p>
                 </div>
@@ -108,12 +109,67 @@ export const Hero = () => {
                         </motion.div>
                     )}
                 </AnimatePresence>
-                <div className="flex flex-col items-center justify-center gap-4 mt-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10 w-full max-w-5xl px-4 mt-12">
+                    {/* Interests */}
+                    <div className="grid grid-cols-2 md:grid-cols-2 col-span-1 md:col-span-2 gap-4">
+                        {PROFILE.interests.map((interest: any, index: number) => {
+                            const icons: Record<string, any> = {
+                                Camera,
+                                Monitor,
+                                Music,
+                                Zap
+                            };
+                            const IconComponent = icons[interest.icon] || Zap;
+
+                            return (
+                                <div
+                                    key={interest.label}
+                                    className="flex items-center gap-4 px-6 py-5 rounded-[1.5rem] bg-zinc-900/90 border border-white/5 text-zinc-400 cursor-default backdrop-blur-md"
+                                >
+                                    <div className="p-2.5 rounded-xl bg-blue-500/10 text-blue-400">
+                                        <IconComponent size={20} />
+                                    </div>
+                                    <span className="text-lg font-bold tracking-tight text-white">{interest.label}</span>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    {/* Experience Card */}
+                    <div className="glass-card p-8 rounded-[2rem] border-white/10 bg-white/5 shadow-2xl relative overflow-hidden flex items-center gap-6 md:row-span-1 lg:row-span-1 border border-white/5">
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-transparent opacity-50" />
+
+                        <div className="w-14 h-14 rounded-2xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center shrink-0 relative z-10">
+                            <Briefcase className="w-7 h-7 text-purple-400" />
+                        </div>
+
+                        <div className="relative z-10 flex flex-col items-start text-left">
+                            <span className="text-[8px] font-bold uppercase tracking-[0.3em] text-zinc-500/80 mb-1">nearly</span>
+                            <div className="flex items-baseline gap-2 mt-1">
+                                <span className="text-4xl font-black text-white">2</span>
+                                <span className="text-4xl font-black text-white tracking-tight">Years</span>
+                            </div>
+                            <span className="text-[8px] font-bold uppercase tracking-[0.3em] text-zinc-500/80 mt-1">experience</span>
+                        </div>
+                    </div>
+                </div>
+
+                <motion.div
+                    animate={{
+                        y: [0, -8, 0]
+                    }}
+                    transition={{
+                        duration: 4,
+                        repeat: Infinity,
+                        ease: "linear"
+                    }}
+                    className="flex flex-col items-center justify-center gap-4 mt-6"
+                >
                     <a href={PROFILE.resumeUrl} download className="inline-block">
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.98 }}
-                            className="relative group overflow-hidden rounded-full inline-block shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] transition-shadow duration-300"
+                            className="relative group overflow-hidden rounded-full inline-block shadow-[0_0_30px_rgba(37,99,235,0.4)] hover:shadow-[0_0_40px_rgba(37,99,235,0.6)] transition-shadow duration-300"
                         >
                             {/* Animated Shimmer Effect */}
                             <motion.div
@@ -128,8 +184,8 @@ export const Hero = () => {
                                 className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 z-10"
                             />
 
-                            <Button view="action" size="xl" className="rounded-full px-8 py-6 text-lg transition-all relative z-20">
-                                Download Resume
+                            <Button view="action" size="xl" className="rounded-full px-8 py-6 text-lg transition-all relative z-20 uppercase tracking-widest font-bold border border-blue-400/30">
+                                DOWNLOAD RESUME
                                 <Icon data={ArrowDown} size={18} className="ml-2" />
                             </Button>
                         </motion.div>
@@ -138,7 +194,7 @@ export const Hero = () => {
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.98 }}
-                            className="relative group overflow-hidden rounded-full inline-block shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:shadow-[0_0_35px_rgba(255,191,0,0.6)] transition-shadow duration-300"
+                            className="relative group overflow-hidden rounded-full inline-block shadow-[0_0_30px_rgba(245,158,11,0.5)] hover:shadow-[0_0_45px_rgba(255,191,0,0.7)] transition-shadow duration-300"
                         >
                             {/* Animated Shimmer Effect */}
                             <motion.div
@@ -154,11 +210,11 @@ export const Hero = () => {
                             />
 
                             <Button size="xl" className="rounded-full px-10 py-6 text-lg bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-white border-2 border-amber-200/50 hover:border-amber-300 transition-all duration-300 uppercase tracking-widest font-bold">
-                                My Articles!
+                                MY ARTICLES!
                             </Button>
                         </motion.div>
                     </Link>
-                </div>
+                </motion.div>
             </motion.div>
         </section>
     );

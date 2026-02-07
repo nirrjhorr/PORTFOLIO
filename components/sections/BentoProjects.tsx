@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Card, Label } from "@gravity-ui/uikit";
+import { Card } from "@gravity-ui/uikit";
 import { motion } from "framer-motion";
 import { PROJECTS } from "@/lib/data";
 
@@ -31,9 +31,12 @@ export const BentoProjects = () => {
 
                             <div className="flex flex-nowrap gap-1.5 overflow-x-auto no-scrollbar scroll-smooth mt-auto pt-4 border-t border-white/5">
                                 {project.tags.map((tag: string, i: number) => (
-                                    <Label key={i} theme="info" className="bg-blue-500/10 text-blue-300 border-blue-500/20 px-2 py-0.5 text-[9px] uppercase tracking-wider whitespace-nowrap">
+                                    <span
+                                        key={i}
+                                        className="bg-blue-600/20 text-blue-400 border border-blue-500/30 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider whitespace-nowrap hover:bg-blue-500/30 hover:text-blue-300 transition-all duration-300"
+                                    >
                                         {tag}
-                                    </Label>
+                                    </span>
                                 ))}
                             </div>
                         </Card>

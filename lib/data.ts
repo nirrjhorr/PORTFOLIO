@@ -57,7 +57,7 @@ import {
 export const PROFILE = {
     name: "MD Hasan Al Rashid",
     role: "QA Engineer",
-    summary: "QA Engineer with nearly 2 years of experience testing SaaS-based, multi-tenant platforms, including LMS/LXP, ERP, HR, POS, and e-commerce systems. Skilled in manual, API, regression, and end-to-end testing, test planning, and Agile/Scrum collaboration, with exposure to microservices and performance testing and a growing focus on test automation.",
+    summary: "I am a QA Engineer with nearly 2 years of experience testing SaaS-based, multi-tenant platforms across domains such as LMS/LXP, ERP, HR, POS, and e-commerce. My work primarily involves manual, API, regression, and end-to-end testing, along with test planning and release validation in Agile and Scrum environments. I have hands-on experience working with complex workflows, validating business-critical features, and ensuring product quality across multiple environments. I am comfortable collaborating with cross-functional teams, including developers, product managers, and designers, to clarify requirements and identify risks early in the development cycle. I have exposure to microservices-based architectures and performance testing, and I am gradually expanding my expertise in test automation to improve coverage and efficiency. Having tested a variety of software platforms and systems, I bring a practical, detail-oriented approach focused on delivering stable, reliable, and scalable products.",
     location: "Dhaka, Bangladesh",
     email: "mdhasanxtech@gmail.com",
     phone: "+880 1993 324 032",
@@ -65,6 +65,12 @@ export const PROFILE = {
     github: "https://github.com/nirrjhorr",
     resumeUrl: "/Md_Hasan_Al_Rashid_QA_Resume.pdf",
     profileImage: "/profile.jpg",
+    interests: [
+        { label: "Photo", icon: "Camera" },
+        { label: "Anime", icon: "Monitor" },
+        { label: "Music", icon: "Music" },
+        { label: "Tech Enthusiast", icon: "Zap" }
+    ]
 };
 
 export const SKILLS = [
