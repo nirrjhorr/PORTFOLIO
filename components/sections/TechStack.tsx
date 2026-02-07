@@ -3,13 +3,40 @@
 import React from "react";
 import { SKILLS } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { Skill } from "@/lib/types";
+import { Icon } from "@gravity-ui/uikit";
 
 export const TechStack = () => {
     // Duplicate skills for seamless infinite scroll
     const scrollSkills = [...SKILLS, ...SKILLS];
 
+    const renderIcon = (skill: Skill) => {
+        const IconComponent = skill.icon;
+
+        // Handle Gravity UI icons (objects with 'data' or specific structure)
+        if (typeof IconComponent === 'object' && 'data' in IconComponent) {
+            return (
+                <Icon
+                    data={IconComponent as any}
+                    size={28}
+                    className="transition-colors duration-300 text-zinc-400 group-hover/item:text-[var(--brand-color)]"
+                    style={{ "--brand-color": skill.color } as React.CSSProperties}
+                />
+            );
+        }
+
+        // Handle React components (Lucide, React Icons)
+        return (
+            <IconComponent
+                size={28}
+                className="transition-colors duration-300 text-zinc-400 group-hover/item:text-[var(--brand-color)]"
+                style={{ "--brand-color": skill.color } as React.CSSProperties}
+            />
+        );
+    };
+
     return (
-        <section className="py-24 px-4 overflow-hidden bg-zinc-950">
+        <section className="py-12 px-4 overflow-hidden bg-zinc-950">
             <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 mb-4">
                     SQA Arsenal

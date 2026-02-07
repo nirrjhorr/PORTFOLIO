@@ -16,7 +16,7 @@ export default function Home() {
         <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-500/10 rounded-full blur-[100px]" />
       </div>
 
-      <div className="relative z-10 flex flex-col gap-20">
+      <div className="relative z-10 flex flex-col">
         <Navbar />
         <div id="home"><Hero /></div>
         <div id="stack"><TechStack /></div>

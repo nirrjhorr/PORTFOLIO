@@ -48,7 +48,7 @@ export const Hero = () => {
     };
 
     return (
-        <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-32 relative overflow-hidden bg-zinc-950">
+        <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-48 pb-12 relative bg-zinc-950">
             <Spotlight
                 className="-top-40 left-0 md:left-60 md:-top-20"
                 fill="white"

@@ -66,9 +66,9 @@ export const PROFILE = {
     resumeUrl: "/Md_Hasan_Al_Rashid_QA_Resume.pdf",
     profileImage: "/profile.jpg",
     interests: [
-        { label: "Photo", icon: "Camera" },
+        { label: "photography", icon: "Camera" },
         { label: "Anime", icon: "Monitor" },
-        { label: "Music", icon: "Music" },
+        { label: "audiophile", icon: "Music" },
         { label: "Tech Enthusiast", icon: "Zap" }
     ]
 };
